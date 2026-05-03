@@ -348,6 +348,13 @@ export const en = {
         outlet: "MTV Lebanon",
         topic: "Lebanon's current conditions and rising suicide cases",
       },
+      {
+        id: "mtv-purchasing-2020",
+        provider: "facebook",
+        url: "https://www.facebook.com/share/p/18bVJ4aqA2/",
+        outlet: "MTV Lebanon",
+        topic: "Purchasing power and mental health during the holiday season",
+      },
     ],
   },
   cta: {

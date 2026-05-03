@@ -338,6 +338,13 @@ export const fr: Translations = {
         outlet: "MTV Liban",
         topic: "Les conditions actuelles du Liban et la hausse des suicides",
       },
+      {
+        id: "mtv-purchasing-2020",
+        provider: "facebook",
+        url: "https://www.facebook.com/share/p/18bVJ4aqA2/",
+        outlet: "MTV Liban",
+        topic: "Pouvoir d'achat et santé mentale pendant les fêtes",
+      },
     ],
   },
   cta: {
