@@ -297,6 +297,34 @@ export const fr: Translations = {
     cta: "Lire",
     duration: "0:45",
   },
+  press: {
+    eyebrow: "Dans la presse",
+    title: "Sur les écrans nationaux.",
+    body: "Sollicitée par les chaînes libanaises et panarabes pour son regard sur la santé mentale, la parentalité, et les conditions sociales qui façonnent les deux.",
+    watchCta: "Regarder l'interview",
+    items: [
+      {
+        id: "I0Ir1s35Pqc",
+        outlet: "Sky News Arabia",
+        topic: "Les troubles alimentaires et leur impact psychologique",
+      },
+      {
+        id: "C0XoStFyPck",
+        outlet: "Al Jadeed TV",
+        topic: "L'effet de la crise actuelle sur la santé mentale des enfants et des familles",
+      },
+      {
+        id: "vEWGfp52MuA",
+        outlet: "MTV Liban · MTV Family",
+        topic: "Les conditions actuelles du Liban et la hausse des suicides",
+      },
+      {
+        id: "nGpvOBe9lgE",
+        outlet: "Sky News Arabia",
+        topic: "La santé mentale en temps de crise · août 2022",
+      },
+    ],
+  },
   cta: {
     title: "Prêt(e) à commencer ?",
     subtitle: "Une première séance dure cinquante minutes. Pas d'étiquettes, pas de jugement, juste un point de départ.",

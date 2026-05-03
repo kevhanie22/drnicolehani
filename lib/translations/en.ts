@@ -307,6 +307,34 @@ export const en = {
     cta: "Play",
     duration: "0:45",
   },
+  press: {
+    eyebrow: "In the press",
+    title: "Featured on national television.",
+    body: "Sought out by Lebanese and pan-Arab broadcasters for her perspective on mental health, parenting, and the social conditions that shape both.",
+    watchCta: "Watch the full interview",
+    items: [
+      {
+        id: "I0Ir1s35Pqc",
+        outlet: "Sky News Arabia",
+        topic: "Eating disorders and their psychological impact",
+      },
+      {
+        id: "C0XoStFyPck",
+        outlet: "Al Jadeed TV",
+        topic: "How the current crisis is affecting children and families' mental health",
+      },
+      {
+        id: "vEWGfp52MuA",
+        outlet: "MTV Lebanon · MTV Family",
+        topic: "Lebanon's current conditions and rising suicide cases",
+      },
+      {
+        id: "nGpvOBe9lgE",
+        outlet: "Sky News Arabia",
+        topic: "Mental health in times of crisis · August 2022",
+      },
+    ],
+  },
   cta: {
     title: "When you're ready, I'm here.",
     subtitle: "A first session is fifty minutes. No labels, no judgment, just a place to start.",
