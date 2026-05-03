@@ -15,13 +15,13 @@ export function Footer({ locale }: { locale: Locale }) {
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-8">
           <div className="lg:col-span-5">
             <Link href={base || "/"} className="inline-flex items-center gap-3">
-              <span className="relative inline-flex h-11 w-11 items-center justify-center rounded-full overflow-hidden ring-1 ring-cream/20">
+              <span className="relative inline-flex h-11 w-11 items-center justify-center">
                 <Image
                   src="/images/logo-mark.png"
                   alt="Dr. Nicole Hani logo"
                   width={88}
                   height={88}
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-contain"
                 />
               </span>
               <span className="font-serif text-[20px] text-cream">Dr. Nicole Hani</span>

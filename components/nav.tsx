@@ -53,13 +53,13 @@ export function Nav({ locale }: { locale: Locale }) {
       >
         <div className="container-edge flex items-center justify-between h-[88px]">
           <Link href={base || "/"} className="group flex items-center gap-3" aria-label="Dr. Nicole Hani — Home">
-            <span className="relative inline-flex h-11 w-11 items-center justify-center rounded-full overflow-hidden ring-1 ring-line">
+            <span className="relative inline-flex h-11 w-11 items-center justify-center">
               <Image
                 src="/images/logo-mark.png"
                 alt="Dr. Nicole Hani logo"
                 width={88}
                 height={88}
-                className="h-full w-full object-cover"
+                className="h-full w-full object-contain"
                 priority
               />
             </span>

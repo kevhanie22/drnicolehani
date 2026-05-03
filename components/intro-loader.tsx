@@ -40,14 +40,14 @@ export function IntroLoader({ locale }: { locale: "en" | "fr" }) {
             initial={{ opacity: 0, scale: 0.92 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="relative inline-flex h-20 w-20 items-center justify-center rounded-full overflow-hidden ring-2 ring-cream/30"
+            className="relative inline-flex h-24 w-24 items-center justify-center"
           >
             <Image
               src="/images/logo-mark.png"
               alt="Dr. Nicole Hani logo"
-              width={160}
-              height={160}
-              className="h-full w-full object-cover"
+              width={192}
+              height={192}
+              className="h-full w-full object-contain"
               priority
             />
           </motion.div>
