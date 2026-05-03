@@ -67,7 +67,7 @@ export function WelcomeVideoSection({ locale }: { locale: Locale }) {
               <span className="inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500" />
               <span className="tabular-nums">{t.welcome.duration}</span>
               <span className="h-1 w-1 rounded-full bg-line" />
-              <span>{locale === "fr" ? "Vidéo originale" : "Original recording"}</span>
+              <span>{locale === "fr" ? "Présentation du cabinet" : "Clinic overview"}</span>
             </div>
           </FadeUp>
 
@@ -138,11 +138,13 @@ export function WelcomeVideoSection({ locale }: { locale: Locale }) {
 
                       {/* Bottom caption */}
                       <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-4 text-cream">
-                        <p className="font-serif text-[18px] lg:text-[22px] leading-snug tracking-[-0.005em] text-balance max-w-[24ch]">
-                          {locale === "fr" ? "Bienvenue au cabinet." : "Welcome to the practice."}
+                        <p className="font-serif text-[18px] lg:text-[22px] leading-snug tracking-[-0.005em] text-balance max-w-[26ch]">
+                          {locale === "fr"
+                            ? "Le cabinet, ses services et son équipe."
+                            : "The clinic, its services and its team."}
                         </p>
                         <span className="text-[10.5px] tracking-[0.18em] uppercase text-cream/70">
-                          DR · NICOLE HANI
+                          CLINIC · OVERVIEW
                         </span>
                       </div>
                     </div>
