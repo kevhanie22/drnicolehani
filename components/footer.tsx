@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Instagram, Facebook, Linkedin, Mail, Phone, MessageCircle } from "lucide-react";
 import { type Locale } from "@/lib/i18n";
 import { getT } from "@/lib/translations";
@@ -14,8 +15,14 @@ export function Footer({ locale }: { locale: Locale }) {
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-8">
           <div className="lg:col-span-5">
             <Link href={base || "/"} className="inline-flex items-center gap-3">
-              <span className="relative flex h-10 w-10 items-center justify-center rounded-full bg-gold text-brand-deep font-serif text-2xl leading-none">
-                Ψ
+              <span className="relative inline-flex h-11 w-11 items-center justify-center rounded-full overflow-hidden ring-1 ring-cream/20">
+                <Image
+                  src="/images/logo-mark.png"
+                  alt="Dr. Nicole Hani logo"
+                  width={88}
+                  height={88}
+                  className="h-full w-full object-cover"
+                />
               </span>
               <span className="font-serif text-[20px] text-cream">Dr. Nicole Hani</span>
             </Link>

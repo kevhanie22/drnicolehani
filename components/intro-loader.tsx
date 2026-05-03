@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
 export function IntroLoader({ locale }: { locale: "en" | "fr" }) {
@@ -39,9 +40,16 @@ export function IntroLoader({ locale }: { locale: "en" | "fr" }) {
             initial={{ opacity: 0, scale: 0.92 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="relative flex h-16 w-16 items-center justify-center rounded-full bg-gold text-brand-deep font-serif text-4xl leading-none"
+            className="relative inline-flex h-20 w-20 items-center justify-center rounded-full overflow-hidden ring-2 ring-cream/30"
           >
-            Ψ
+            <Image
+              src="/images/logo-mark.png"
+              alt="Dr. Nicole Hani logo"
+              width={160}
+              height={160}
+              className="h-full w-full object-cover"
+              priority
+            />
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 8 }}

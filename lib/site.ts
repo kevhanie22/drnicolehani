@@ -33,7 +33,7 @@ export const site = {
     {
       key: "saint-joseph",
       name: { en: "Saint Joseph University Hospital", fr: "Hôpital Universitaire Saint-Joseph" },
-      address: { en: "Hôtel-Dieu de France, Achrafieh, Beirut", fr: "Hôtel-Dieu de France, Achrafieh, Beyrouth" },
+      address: { en: "Dora, Beirut", fr: "Dora, Beyrouth" },
       phone: "+961 1 240 111 ext. 1170 / 1171",
       phoneHref: "tel:+9611240111",
       hours: { en: "Outpatient consultation", fr: "Consultation externe" },

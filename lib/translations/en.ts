@@ -74,11 +74,11 @@ export const en = {
           "Full diagnostic battery covering cognition, attention, personality, and mental health. Reports prepared for schools and medical referrals.",
         bullets: [
           "Intelligence (IQ) tests",
-          "TOVA · Test of Variables of Attention",
-          "Psychopathology & symptom rating scales",
-          "Neuropsychological tests",
           "Personality assessment tests",
           "Child & adolescent assessment",
+          "TOVA · Test of Variables of Attention",
+          "Neuropsychological tests",
+          "Psychopathology & symptom rating scales",
           "Mental health reports for schools & medical referrals",
         ],
       },
@@ -299,6 +299,13 @@ export const en = {
     cta: "Watch on Instagram",
     duration: "1:24",
     posterCaption: "From the @dr_nicolehani feed",
+  },
+  welcome: {
+    eyebrow: "A word from the practice",
+    title: "Hear it from her, in 45 seconds.",
+    body: "A short welcome from Dr. Nicole Hani. The voice you'd hear walking into the consulting room.",
+    cta: "Play",
+    duration: "0:45",
   },
   cta: {
     title: "When you're ready, I'm here.",

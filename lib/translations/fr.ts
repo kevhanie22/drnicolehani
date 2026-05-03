@@ -76,11 +76,11 @@ export const fr: Translations = {
           "Batterie diagnostique complète couvrant cognition, attention, personnalité et santé mentale. Rapports rédigés pour les écoles et les références médicales.",
         bullets: [
           "Tests d'intelligence (QI)",
-          "TOVA · Test des Variables d'Attention",
-          "Échelles de psychopathologie & de symptômes",
-          "Tests neuropsychologiques",
           "Tests d'évaluation de la personnalité",
           "Bilan enfant & adolescent",
+          "TOVA · Test des Variables d'Attention",
+          "Tests neuropsychologiques",
+          "Échelles de psychopathologie & de symptômes",
           "Rapports pour écoles & références médicales",
         ],
       },
@@ -289,6 +289,13 @@ export const fr: Translations = {
     cta: "Regarder sur Instagram",
     duration: "1:24",
     posterCaption: "Issu du fil @dr_nicolehani",
+  },
+  welcome: {
+    eyebrow: "Un mot du cabinet",
+    title: "Écoutez-la, en 45 secondes.",
+    body: "Un court mot d'accueil du Dr Nicole Hani. La voix que vous entendriez en entrant au cabinet.",
+    cta: "Lire",
+    duration: "0:45",
   },
   cta: {
     title: "Prêt(e) à commencer ?",

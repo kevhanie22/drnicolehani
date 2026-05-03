@@ -1,5 +1,6 @@
 import { Hero } from "@/components/hero";
 import { AboutSection } from "@/components/about-section";
+import { WelcomeVideoSection } from "@/components/welcome-video-section";
 import { ServicesSection } from "@/components/services-section";
 import { ApproachSection } from "@/components/approach-section";
 import { CredentialsSection } from "@/components/credentials-section";
@@ -13,6 +14,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
     <>
       <Hero locale={lc} />
       <AboutSection locale={lc} />
+      <WelcomeVideoSection locale={lc} />
       <ServicesSection locale={lc} />
       <ApproachSection locale={lc} />
       <CredentialsSection locale={lc} />

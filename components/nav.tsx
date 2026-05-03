@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
@@ -52,8 +53,15 @@ export function Nav({ locale }: { locale: Locale }) {
       >
         <div className="container-edge flex items-center justify-between h-[88px]">
           <Link href={base || "/"} className="group flex items-center gap-3" aria-label="Dr. Nicole Hani — Home">
-            <span className="relative flex h-10 w-10 items-center justify-center rounded-full bg-gold text-brand-deep font-serif text-2xl leading-none">
-              Ψ
+            <span className="relative inline-flex h-11 w-11 items-center justify-center rounded-full overflow-hidden ring-1 ring-line">
+              <Image
+                src="/images/logo-mark.png"
+                alt="Dr. Nicole Hani logo"
+                width={88}
+                height={88}
+                className="h-full w-full object-cover"
+                priority
+              />
             </span>
             <span className="hidden sm:flex flex-col leading-tight">
               <span className="font-serif text-[18px] text-ink tracking-tight">Dr. Nicole Hani</span>
