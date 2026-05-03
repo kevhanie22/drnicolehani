@@ -5,7 +5,7 @@ export const site = {
     en: "Clinical Psychologist & CBT Therapist",
     fr: "Psychologue Clinicienne & Thérapeute TCC",
   },
-  baseUrl: "https://drnicolehani.com",
+  baseUrl: "https://drnicolehani.vercel.app",
   email: "nicoleabsi71@gmail.com",
   phone: {
     primary: "+961 71 635 800",

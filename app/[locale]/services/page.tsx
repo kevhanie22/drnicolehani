@@ -7,7 +7,17 @@ import { getT } from "@/lib/translations";
 export function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
   const lc: Locale = isLocale(locale) ? locale : "en";
   const t = getT(lc);
-  return { title: t.nav.services, description: t.services.subtitle };
+  const isFr = lc === "fr";
+  return {
+    title: isFr
+      ? "Services — Thérapie enfants, adultes, couples au Liban · TCC"
+      : "Services — Child, Adult & Couples Therapy in Lebanon · CBT & Psychometric Testing",
+    description: t.services.subtitle,
+    alternates: {
+      canonical: isFr ? "/fr/services" : "/services",
+      languages: { en: "/services", fr: "/fr/services", "x-default": "/services" },
+    },
+  };
 }
 
 export default function ServicesPage({ params: { locale } }: { params: { locale: string } }) {

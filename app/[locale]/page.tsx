@@ -1,11 +1,8 @@
 import { Hero } from "@/components/hero";
-import { AboutSection } from "@/components/about-section";
 import { WelcomeVideoSection } from "@/components/welcome-video-section";
 import { ServicesSection } from "@/components/services-section";
-import { ApproachSection } from "@/components/approach-section";
+import { AboutSection } from "@/components/about-section";
 import { PressSection } from "@/components/press-section";
-import { CredentialsSection } from "@/components/credentials-section";
-import { FaqSection } from "@/components/faq-section";
 import { CtaSection } from "@/components/cta-section";
 import { type Locale, isLocale } from "@/lib/i18n";
 
@@ -14,13 +11,10 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
   return (
     <>
       <Hero locale={lc} />
-      <AboutSection locale={lc} />
       <WelcomeVideoSection locale={lc} />
       <ServicesSection locale={lc} />
-      <ApproachSection locale={lc} />
+      <AboutSection locale={lc} />
       <PressSection locale={lc} />
-      <CredentialsSection locale={lc} />
-      <FaqSection locale={lc} />
       <CtaSection locale={lc} />
     </>
   );

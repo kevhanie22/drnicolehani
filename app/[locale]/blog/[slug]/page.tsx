@@ -17,7 +17,17 @@ export function generateMetadata({ params }: { params: { locale: string; slug: s
   const lc: Locale = isLocale(params.locale) ? params.locale : "en";
   const post = getPost(lc, params.slug);
   if (!post) return {};
-  return { title: post.title, description: post.excerpt };
+  const isFr = lc === "fr";
+  const path = `/blog/${params.slug}`;
+  return {
+    title: post.title,
+    description: post.excerpt,
+    alternates: {
+      canonical: isFr ? `/fr${path}` : path,
+      languages: { en: path, fr: `/fr${path}`, "x-default": path },
+    },
+    openGraph: { title: post.title, description: post.excerpt, type: "article" },
+  };
 }
 
 export default function BlogPostPage({ params }: { params: { locale: string; slug: string } }) {

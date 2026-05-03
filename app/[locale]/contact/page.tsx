@@ -8,7 +8,17 @@ import { FadeUp } from "@/components/motion";
 export function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
   const lc: Locale = isLocale(locale) ? locale : "en";
   const t = getT(lc);
-  return { title: t.nav.contact, description: t.contact.subtitle };
+  const isFr = lc === "fr";
+  return {
+    title: isFr
+      ? "Prendre rendez-vous — Dr Nicole Hani, psychologue à Beyrouth"
+      : "Book a Session — Dr. Nicole Hani · Psychologist in Beirut, Lebanon",
+    description: t.contact.subtitle,
+    alternates: {
+      canonical: isFr ? "/fr/contact" : "/contact",
+      languages: { en: "/contact", fr: "/fr/contact", "x-default": "/contact" },
+    },
+  };
 }
 
 export default function ContactPage({ params: { locale } }: { params: { locale: string } }) {

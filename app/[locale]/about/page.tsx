@@ -1,6 +1,7 @@
 import { AboutSection } from "@/components/about-section";
 import { CredentialsSection } from "@/components/credentials-section";
 import { ApproachSection } from "@/components/approach-section";
+import { FaqSection } from "@/components/faq-section";
 import { CtaSection } from "@/components/cta-section";
 import { isLocale, type Locale } from "@/lib/i18n";
 import { getT } from "@/lib/translations";
@@ -8,9 +9,16 @@ import { getT } from "@/lib/translations";
 export function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
   const lc: Locale = isLocale(locale) ? locale : "en";
   const t = getT(lc);
+  const isFr = lc === "fr";
   return {
-    title: t.nav.about,
+    title: isFr
+      ? "À propos — Dr Nicole Hani, psychologue clinicienne au Liban"
+      : "About Dr. Nicole Hani — Senior Clinical Psychologist in Lebanon",
     description: t.about.body[0],
+    alternates: {
+      canonical: isFr ? "/fr/about" : "/about",
+      languages: { en: "/about", fr: "/fr/about", "x-default": "/about" },
+    },
   };
 }
 
@@ -23,6 +31,7 @@ export default function AboutPage({ params: { locale } }: { params: { locale: st
       <AboutSection locale={lc} />
       <CredentialsSection locale={lc} />
       <ApproachSection locale={lc} />
+      <FaqSection locale={lc} />
       <CtaSection locale={lc} />
     </>
   );

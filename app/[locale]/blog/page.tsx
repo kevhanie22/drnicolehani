@@ -8,7 +8,17 @@ import { CtaSection } from "@/components/cta-section";
 export function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
   const lc: Locale = isLocale(locale) ? locale : "en";
   const t = getT(lc);
-  return { title: t.nav.blog, description: t.blog.subtitle };
+  const isFr = lc === "fr";
+  return {
+    title: isFr
+      ? "Réflexions — Articles d'une psychologue clinicienne au Liban"
+      : "Insights — Articles from a Clinical Psychologist in Lebanon",
+    description: t.blog.subtitle,
+    alternates: {
+      canonical: isFr ? "/fr/blog" : "/blog",
+      languages: { en: "/blog", fr: "/fr/blog", "x-default": "/blog" },
+    },
+  };
 }
 
 export default function BlogIndexPage({ params: { locale } }: { params: { locale: string } }) {
