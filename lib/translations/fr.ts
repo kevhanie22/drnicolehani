@@ -318,13 +318,6 @@ export const fr: Translations = {
         topic: "La santé mentale en temps de crise",
       },
       {
-        id: "lbc-1119763423488139",
-        provider: "facebook",
-        url: "https://www.facebook.com/100063634765343/posts/1119763423488139/",
-        outlet: "LBC Liban",
-        topic: "TDAH, scolarité et prise en charge",
-      },
-      {
         id: "C0XoStFyPck",
         provider: "youtube",
         url: "https://www.youtube.com/watch?v=C0XoStFyPck",
@@ -337,13 +330,6 @@ export const fr: Translations = {
         url: "https://www.youtube.com/watch?v=vEWGfp52MuA",
         outlet: "MTV Liban",
         topic: "Les conditions actuelles du Liban et la hausse des suicides",
-      },
-      {
-        id: "mtv-purchasing-2020",
-        provider: "facebook",
-        url: "https://www.facebook.com/share/p/18bVJ4aqA2/",
-        outlet: "MTV Liban",
-        topic: "Pouvoir d'achat et santé mentale pendant les fêtes",
       },
     ],
   },

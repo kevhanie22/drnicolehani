@@ -183,7 +183,7 @@ export function PressSection({ locale }: { locale: Locale }) {
           </div>
         </FadeUp>
 
-        <Stagger className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
+        <Stagger className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {items.map((it) => (
             <StaggerItem key={it.id}>
               <PressCard item={it as Item} watchCta={t.press.watchCta} locale={locale} />

@@ -328,13 +328,6 @@ export const en = {
         topic: "Mental health in times of crisis",
       },
       {
-        id: "lbc-1119763423488139",
-        provider: "facebook",
-        url: "https://www.facebook.com/100063634765343/posts/1119763423488139/",
-        outlet: "LBC Lebanon",
-        topic: "ADHD, school performance, and how to treat it",
-      },
-      {
         id: "C0XoStFyPck",
         provider: "youtube",
         url: "https://www.youtube.com/watch?v=C0XoStFyPck",
@@ -347,13 +340,6 @@ export const en = {
         url: "https://www.youtube.com/watch?v=vEWGfp52MuA",
         outlet: "MTV Lebanon",
         topic: "Lebanon's current conditions and rising suicide cases",
-      },
-      {
-        id: "mtv-purchasing-2020",
-        provider: "facebook",
-        url: "https://www.facebook.com/share/p/18bVJ4aqA2/",
-        outlet: "MTV Lebanon",
-        topic: "Purchasing power and mental health during the holiday season",
       },
     ],
   },
