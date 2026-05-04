@@ -13,17 +13,17 @@ export const fr: Translations = {
   },
   hero: {
     eyebrow: "Psychologue Clinicienne · TCC · Beyrouth & Mont-Liban",
-    title: "Un espace sûr pour penser, ressentir et guérir.",
+    title: "Psychologie clinique au Liban, forte de trente ans de pratique.",
     subtitle:
-      "Psychothérapie fondée sur les preuves pour enfants, adultes et couples. Trois décennies de pratique clinique, certifiée en Thérapie Cognitivo-Comportementale.",
+      "Psychothérapie fondée sur les preuves pour enfants, adultes et couples à Beyrouth et au Mont-Liban. Cabinet privé à Zouk Mosbeh, en arabe, anglais et français.",
     primaryCta: "Prendre rendez-vous",
     secondaryCta: "Découvrir le cabinet",
-    trust: "Reconnue par",
+    trust: "La confiance des principaux hôpitaux et universités du Liban",
   },
   trustBar: ["Université Saint-Joseph", "Université Libanaise", "Hôpital Aboujaoudé", "UNICEF Liban", "Ministère de l'Éducation", "Tribunal Spirituel Maronite"],
   services: {
     eyebrow: "Mes domaines",
-    title: "Une thérapie à chaque étape de la vie.",
+    title: "Une thérapie à chaque étape de la vie — Beyrouth & Mont-Liban.",
     subtitle:
       "J'écoute d'abord. Chaque parcours s'adapte à la personne, jamais à l'étiquette.",
     items: [
@@ -88,9 +88,9 @@ export const fr: Translations = {
   },
   about: {
     eyebrow: "À propos",
-    title: "Trois décennies à écouter, apprendre et soigner.",
+    title: "Trois décennies comme psychologue clinicienne au Liban.",
     body: [
-      "Le Dr Nicole Absi Hani est psychologue clinicienne et thérapeute TCC libanaise, forte de plus de trente ans de pratique. Elle est titulaire d'un Doctorat d'État (1ère catégorie) en Psychologie Clinique de l'Université Saint-Esprit de Kaslik (USEK), et certifiée en Thérapie Cognitivo-Comportementale.",
+      "Considérée comme l'une des principales psychologues cliniciennes du Liban, le Dr Nicole Absi Hani est thérapeute TCC à Beyrouth, forte de plus de trente ans de pratique. Elle est titulaire d'un Doctorat d'État (1ère catégorie) en Psychologie Clinique de l'Université Saint-Esprit de Kaslik (USEK), et certifiée en Thérapie Cognitivo-Comportementale.",
       "Depuis 1996, elle dirige son cabinet privé à Zouk Mosbeh, entourée d'une équipe pluridisciplinaire de psychiatres, orthophonistes, psychomotriciens et nutritionnistes. Elle est également Professeure de Neuropsychologie à l'Université Saint-Joseph et à l'Université Libanaise, psychologue consultante à l'Hôpital Aboujaoudé et à l'Hôpital Universitaire Saint-Joseph, et expert auprès du Tribunal Spirituel Maronite.",
       "Sa philosophie clinique est simple : chaque patient mérite d'être rencontré là où il se trouve, sans jugement, avec rigueur et avec soin.",
     ],
@@ -334,7 +334,7 @@ export const fr: Translations = {
     ],
   },
   cta: {
-    title: "Prêt(e) à commencer ?",
+    title: "Quand vous êtes prêt(e), je suis là — à Beyrouth, ou en ligne partout au Liban.",
     subtitle: "Une première séance dure cinquante minutes. Pas d'étiquettes, pas de jugement, juste un point de départ.",
     primary: "Prendre rendez-vous",
     secondary: "Envoyer un WhatsApp",

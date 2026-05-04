@@ -56,7 +56,7 @@ export function WelcomeVideoSection({ locale }: { locale: Locale }) {
           {/* Copy column */}
           <FadeUp className="lg:col-span-4 lg:order-1 order-2">
             <p className="micro-label">{t.welcome.eyebrow}</p>
-            <h2 className="mt-4 font-serif text-[2rem] lg:text-[2.4rem] leading-[1.05] tracking-[-0.02em] text-ink text-balance">
+            <h2 className="mt-4 font-serif text-display-lg text-ink text-balance">
               {t.welcome.title}
             </h2>
             <p className="mt-5 max-w-md text-[15.5px] leading-[1.65] text-muted text-pretty">

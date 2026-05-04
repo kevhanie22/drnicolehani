@@ -35,7 +35,7 @@ export function CtaSection({ locale }: { locale: Locale }) {
                   {locale === "fr" ? "Premier pas" : "First step"}
                 </div>
 
-                <h2 className="mt-5 font-serif text-[2.2rem] lg:text-[2.75rem] leading-[1.05] tracking-[-0.02em] text-cream text-balance">
+                <h2 className="mt-5 font-serif text-display-lg text-cream text-balance">
                   {t.cta.title}
                 </h2>
 

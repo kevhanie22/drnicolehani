@@ -30,8 +30,8 @@ html.lenis, html.lenis body { height: auto; }
   body {
     @apply bg-cream text-ink font-sans;
     font-feature-settings: "ss01", "kern";
-    font-size: 17px;
-    line-height: 1.6;
+    font-size: 17.5px;
+    line-height: 1.65;
   }
   ::selection { background: var(--brand); color: var(--cream); }
   h1, h2, h3, h4 {
@@ -70,7 +70,7 @@ html.lenis, html.lenis body { height: auto; }
 
   .btn-primary {
     @apply inline-flex items-center justify-center gap-2 rounded-full bg-brand text-cream
-           px-6 py-3 text-[14px] font-medium tracking-tight
+           px-7 py-3.5 text-[15px] font-medium tracking-tight
            transition-all duration-300 ease-out
            hover:bg-brand-deep
            active:scale-[0.98];
@@ -78,7 +78,7 @@ html.lenis, html.lenis body { height: auto; }
   .btn-secondary {
     @apply inline-flex items-center justify-center gap-2 rounded-full
            border border-ink/15 bg-transparent text-ink
-           px-6 py-3 text-[14px] font-medium tracking-tight
+           px-7 py-3.5 text-[15px] font-medium tracking-tight
            transition-all duration-300 ease-out
            hover:bg-ink hover:text-cream hover:border-ink
            active:scale-[0.98];

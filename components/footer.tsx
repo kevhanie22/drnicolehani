@@ -15,7 +15,7 @@ export function Footer({ locale }: { locale: Locale }) {
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-8">
           <div className="lg:col-span-5">
             <Link href={base || "/"} className="inline-flex items-center gap-3">
-              <span className="relative inline-flex h-11 w-11 items-center justify-center">
+              <span className="relative inline-flex h-14 w-14 items-center justify-center">
                 <Image
                   src="/images/logo-mark.png"
                   alt="Dr. Nicole Hani logo"

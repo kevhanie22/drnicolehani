@@ -35,7 +35,7 @@ export function AboutSection({ locale, compact = false }: { locale: Locale; comp
       <div className="container-wide relative">
         <FadeUp className="max-w-2xl mb-10">
           <p className="micro-label">{t.about.eyebrow}</p>
-          <h2 className="mt-4 font-serif text-[2rem] lg:text-[2.4rem] leading-[1.08] tracking-[-0.02em] text-ink text-balance">
+          <h2 className="mt-4 font-serif text-display-lg text-ink text-balance">
             {t.about.title}
           </h2>
         </FadeUp>

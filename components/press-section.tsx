@@ -158,7 +158,7 @@ export function PressSection({ locale }: { locale: Locale }) {
         <FadeUp className="grid lg:grid-cols-12 gap-x-12 gap-y-6 mb-10 items-end">
           <div className="lg:col-span-7">
             <p className="micro-label">{t.press.eyebrow}</p>
-            <h2 className="mt-4 font-serif text-[2rem] lg:text-[2.4rem] leading-[1.08] tracking-[-0.02em] text-ink text-balance">
+            <h2 className="mt-4 font-serif text-display-lg text-ink text-balance">
               {t.press.title}
             </h2>
           </div>

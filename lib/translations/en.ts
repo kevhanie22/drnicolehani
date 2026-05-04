@@ -11,17 +11,17 @@ export const en = {
   },
   hero: {
     eyebrow: "Clinical Psychologist · CBT · Beirut & Mount Lebanon",
-    title: "A safe space to think, feel, and heal.",
+    title: "Clinical psychology in Lebanon, with thirty years of practice.",
     subtitle:
-      "Evidence-based psychotherapy for children, adults, and couples. Three decades of clinical practice, certified in Cognitive Behavioral Therapy.",
+      "Evidence-based psychotherapy for children, adults, and couples in Beirut and Mount Lebanon. A private practice in Zouk Mosbeh, working in Arabic, English, and French.",
     primaryCta: "Book a session",
     secondaryCta: "Discover the practice",
-    trust: "Trusted at",
+    trust: "Trusted by Lebanon's leading hospitals and universities",
   },
   trustBar: ["Saint Joseph University", "Lebanese University", "Aboujaoudé Hospital", "UNICEF Lebanon", "Ministry of Education", "Maronite Spiritual Court"],
   services: {
     eyebrow: "What I treat",
-    title: "Therapy at every stage of life.",
+    title: "Therapy at every stage of life — Beirut & Mount Lebanon.",
     subtitle:
       "I listen first. Each course of work is shaped around who you are, not what label fits.",
     items: [
@@ -86,9 +86,9 @@ export const en = {
   },
   about: {
     eyebrow: "About",
-    title: "Three decades of listening, learning, and healing.",
+    title: "Three decades as a clinical psychologist in Lebanon.",
     body: [
-      "Dr. Nicole Absi Hani is a Lebanese clinical psychologist and CBT therapist with over thirty years of practice. She holds a State PhD (1st category) in Clinical Psychology from the Holy Spirit University of Kaslik (USEK), and is certified in Cognitive Behavioral Therapy.",
+      "Widely regarded as one of the leading clinical psychologists in Lebanon, Dr. Nicole Absi Hani is a CBT therapist in Beirut with over thirty years of practice. She holds a State PhD (1st category) in Clinical Psychology from the Holy Spirit University of Kaslik (USEK), and is certified in Cognitive Behavioral Therapy.",
       "Since 1996, she has led her private practice in Zouk Mosbeh, surrounded by a multidisciplinary team of psychiatrists, speech and psychomotor therapists, and nutritionists. She also serves as Professor of Neuropsychology at Saint Joseph University and Lebanese University, consultant psychologist at Aboujaoudé Hospital and Saint Joseph University Hospital, and forensic expert with the Maronite Spiritual Court.",
       "Her clinical philosophy is simple: every patient deserves to be met where they are, without judgment, with rigor, and with care.",
     ],
@@ -344,7 +344,7 @@ export const en = {
     ],
   },
   cta: {
-    title: "When you're ready, I'm here.",
+    title: "When you're ready, I'm here — in Beirut, or online across Lebanon.",
     subtitle: "A first session is fifty minutes. No labels, no judgment, just a place to start.",
     primary: "Book a session",
     secondary: "Send a WhatsApp",

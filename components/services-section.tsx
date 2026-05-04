@@ -33,7 +33,7 @@ export function ServicesSection({ locale }: { locale: Locale }) {
       <div className="container-wide relative">
         <FadeUp className="mb-10 max-w-2xl">
           <p className="micro-label">{t.services.eyebrow}</p>
-          <h2 className="mt-4 font-serif text-[2rem] lg:text-[2.4rem] leading-[1.08] tracking-[-0.02em] text-ink text-balance">
+          <h2 className="mt-4 font-serif text-display-lg text-ink text-balance">
             {t.services.title}
           </h2>
         </FadeUp>

@@ -67,7 +67,7 @@ export function Hero({ locale }: { locale: Locale }) {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: easeOut, delay: 0.2 }}
-              className="mt-5 font-serif text-[2rem] sm:text-[2.4rem] lg:text-[2.75rem] leading-[1.05] tracking-[-0.02em] text-ink text-balance"
+              className="mt-5 font-serif text-[2.25rem] sm:text-[2.75rem] lg:text-[3.25rem] leading-[1.05] tracking-[-0.02em] text-ink text-balance"
             >
               {t.hero.title.split(",")[0]}
               {t.hero.title.includes(",") && (
