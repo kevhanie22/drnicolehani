@@ -13,7 +13,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
       <Hero locale={lc} />
       <WelcomeVideoSection locale={lc} />
       <ServicesSection locale={lc} />
-      <AboutSection locale={lc} />
+      <AboutSection locale={lc} compact />
       <PressSection locale={lc} />
       <CtaSection locale={lc} />
     </>

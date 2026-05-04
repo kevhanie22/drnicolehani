@@ -55,7 +55,7 @@ export function ServicesSection({ locale }: { locale: Locale }) {
                   Icon={Icon}
                   title={it.title}
                   summary={it.summary}
-                  bullets={it.bullets.slice(0, 7)}
+                  bullets={it.bullets.slice(0, 3)}
                 />
               </StaggerItem>
             );

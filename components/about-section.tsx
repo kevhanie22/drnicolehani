@@ -6,9 +6,10 @@ import { type Locale } from "@/lib/i18n";
 import { getT } from "@/lib/translations";
 import { FadeUp } from "./motion";
 
-export function AboutSection({ locale }: { locale: Locale }) {
+export function AboutSection({ locale, compact = false }: { locale: Locale; compact?: boolean }) {
   const t = getT(locale);
   const base = locale === "en" ? "" : `/${locale}`;
+  const paragraphs = compact ? t.about.body.slice(0, 1) : t.about.body;
 
   const capsule = [
     { value: "30+", label: locale === "fr" ? "années de pratique" : "years in practice" },
@@ -88,7 +89,7 @@ export function AboutSection({ locale }: { locale: Locale }) {
           {/* body + quote — right column */}
           <FadeUp delay={0.1} className="lg:col-span-7 lg:pl-4">
             <div className="space-y-5 text-[16.5px] leading-[1.75] text-ink/85">
-              {t.about.body.map((p, i) => (
+              {paragraphs.map((p, i) => (
                 <p key={i} className="text-pretty">
                   {p}
                 </p>
