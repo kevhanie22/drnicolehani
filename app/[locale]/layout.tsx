@@ -5,7 +5,6 @@ import { Footer } from "@/components/footer";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import { SmoothScrollProvider } from "@/components/smooth-scroll-provider";
 import { Cursor } from "@/components/cursor";
-import { IntroLoader } from "@/components/intro-loader";
 import { LocaleLangSetter } from "@/components/locale-lang-setter";
 
 export function generateStaticParams() {
@@ -24,7 +23,6 @@ export default function LocaleLayout({
   return (
     <SmoothScrollProvider>
       <LocaleLangSetter locale={locale} />
-      <IntroLoader locale={locale} />
       <Cursor />
       <Nav locale={locale} />
       <main id="main">{children}</main>

@@ -153,27 +153,32 @@ export function CtaSection({ locale }: { locale: Locale }) {
           </div>
           <div className="grid md:grid-cols-3 gap-4">
             {site.locations.map((loc) => (
-              <a
+              <div
                 key={loc.key}
-                href={`https://www.google.com/maps/search/?api=1&query=${loc.mapsQuery}`}
-                target="_blank"
-                rel="noreferrer"
                 onMouseMove={(e) => {
                   const r = (e.currentTarget as HTMLElement).getBoundingClientRect();
                   (e.currentTarget as HTMLElement).style.setProperty("--mx", `${e.clientX - r.left}px`);
                   (e.currentTarget as HTMLElement).style.setProperty("--my", `${e.clientY - r.top}px`);
                 }}
-                className="group spot-hover relative block overflow-hidden rounded-2xl surface-card p-6 transition-all duration-500 hover:-translate-y-0.5 hover:shadow-[0_22px_44px_-22px_rgba(11,18,32,0.16)]"
+                className="group spot-hover relative overflow-hidden rounded-2xl surface-card p-6 transition-all duration-500 hover:-translate-y-0.5 hover:shadow-[0_22px_44px_-22px_rgba(11,18,32,0.16)]"
               >
                 <span className="gold-line-grow rounded-t-2xl" aria-hidden />
                 <div className="flex items-start justify-between gap-3">
                   <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-gold/22 to-gold/6 text-gold ring-1 ring-gold/25">
                     <MapPin className="h-4 w-4" strokeWidth={1.8} />
                   </span>
-                  <ArrowUpRight
-                    className="h-4 w-4 text-muted/60 transition-all duration-300 group-hover:text-brand group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                    strokeWidth={1.6}
-                  />
+                  <a
+                    href={`https://www.google.com/maps/search/?api=1&query=${loc.mapsQuery}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`${loc.name[locale]} on Google Maps`}
+                    className="inline-flex h-7 w-7 items-center justify-center rounded-full text-muted/70 hover:text-brand hover:bg-cream/60 transition-all duration-300"
+                  >
+                    <ArrowUpRight
+                      className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                      strokeWidth={1.6}
+                    />
+                  </a>
                 </div>
                 <div className="mt-5">
                   <div className="font-serif text-[18px] text-ink leading-snug tracking-[-0.005em]">
@@ -186,14 +191,13 @@ export function CtaSection({ locale }: { locale: Locale }) {
                     <Phone className="h-3 w-3 text-gold/80" strokeWidth={1.8} />
                     <a
                       href={loc.phoneHref}
-                      onClick={(e) => e.stopPropagation()}
                       className="tabular-nums hover:text-brand transition-colors"
                     >
                       {loc.phone}
                     </a>
                   </div>
                 </div>
-              </a>
+              </div>
             ))}
           </div>
         </FadeUp>
