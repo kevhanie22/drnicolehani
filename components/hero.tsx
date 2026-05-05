@@ -201,19 +201,6 @@ export function Hero({ locale }: { locale: Locale }) {
                 </div>
               </div>
 
-              {/* floating credential chips — adds depth & life */}
-              <motion.div
-                aria-hidden
-                initial={{ opacity: 0, x: -10, y: -10 }}
-                animate={{ opacity: 1, x: 0, y: 0 }}
-                transition={{ delay: 0.9, duration: 0.6, ease: easeOut }}
-                className="absolute -left-3 top-10 hidden lg:flex items-center gap-2 rounded-full bg-white/90 backdrop-blur ring-1 ring-line/80 px-3.5 py-2 shadow-[0_10px_28px_-12px_rgba(11,18,32,0.18)]"
-              >
-                <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 shadow-[0_0_0_4px_rgba(16,185,129,0.15)]" />
-                <span className="text-[11.5px] text-ink font-medium">
-                  {locale === "fr" ? "Disponible cette semaine" : "Available this week"}
-                </span>
-              </motion.div>
             </div>
           </motion.div>
         </div>
