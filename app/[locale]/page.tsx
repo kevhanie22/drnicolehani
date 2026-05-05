@@ -3,6 +3,7 @@ import { WelcomeVideoSection } from "@/components/welcome-video-section";
 import { ServicesSection } from "@/components/services-section";
 import { AboutSection } from "@/components/about-section";
 import { PressSection } from "@/components/press-section";
+import { ArticlesSection } from "@/components/articles-section";
 import { CtaSection } from "@/components/cta-section";
 import { type Locale, isLocale } from "@/lib/i18n";
 
@@ -15,6 +16,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
       <ServicesSection locale={lc} />
       <AboutSection locale={lc} compact />
       <PressSection locale={lc} />
+      <ArticlesSection locale={lc} />
       <CtaSection locale={lc} />
     </>
   );
