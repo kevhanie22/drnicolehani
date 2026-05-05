@@ -32,7 +32,7 @@ export function ArticlesSection({ locale }: { locale: Locale }) {
   return (
     <section
       id="articles"
-      className="relative py-14 lg:py-20 border-t border-line/70 overflow-hidden"
+      className="relative py-10 lg:py-14 border-t border-line/30 overflow-hidden"
     >
       <div
         aria-hidden
@@ -49,7 +49,7 @@ export function ArticlesSection({ locale }: { locale: Locale }) {
       />
 
       <div className="container-wide relative">
-        <FadeUp className="grid lg:grid-cols-12 gap-x-12 gap-y-6 mb-10 items-end">
+        <FadeUp className="grid lg:grid-cols-12 gap-x-12 gap-y-6 mb-6 items-end">
           <div className="lg:col-span-7">
             <p className="micro-label">{t.articles.eyebrow}</p>
             <h2 className="mt-4 font-serif text-display-lg text-ink text-balance">
@@ -57,7 +57,7 @@ export function ArticlesSection({ locale }: { locale: Locale }) {
             </h2>
           </div>
           <div className="lg:col-span-5">
-            <p className="text-[15.5px] leading-[1.7] text-muted text-pretty">
+            <p className="text-[16.5px] leading-[1.7] text-muted text-pretty">
               {t.articles.body}
             </p>
           </div>
@@ -102,7 +102,7 @@ export function ArticlesSection({ locale }: { locale: Locale }) {
                 <h3 className="font-serif text-[20px] lg:text-[22px] text-ink leading-[1.25] tracking-[-0.005em] text-balance">
                   {it.title}
                 </h3>
-                <p className="mt-3 text-[14px] leading-[1.65] text-muted text-pretty">
+                <p className="mt-3 text-[15px] leading-[1.65] text-muted text-pretty">
                   {it.topic}
                 </p>
 

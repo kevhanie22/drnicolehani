@@ -18,7 +18,7 @@ export function ServicesSection({ locale }: { locale: Locale }) {
   return (
     <section
       id="services"
-      className="relative py-14 lg:py-20 border-t border-line/70 overflow-hidden"
+      className="relative py-10 lg:py-14 border-t border-line/30 overflow-hidden"
     >
       {/* gentle warm wash behind the section */}
       <div
@@ -31,7 +31,7 @@ export function ServicesSection({ locale }: { locale: Locale }) {
       />
 
       <div className="container-wide relative">
-        <FadeUp className="mb-10 max-w-2xl">
+        <FadeUp className="mb-6 max-w-2xl">
           <p className="micro-label">{t.services.eyebrow}</p>
           <h2 className="mt-4 font-serif text-display-lg text-ink text-balance">
             {t.services.title}
@@ -119,7 +119,7 @@ function FeaturedCard({
           {item.title}
         </h3>
 
-        <p className="mt-5 max-w-[52ch] text-[15.5px] leading-[1.7] text-muted text-pretty">
+        <p className="mt-5 max-w-[52ch] text-[16.5px] leading-[1.7] text-muted text-pretty">
           {item.summary}
         </p>
 

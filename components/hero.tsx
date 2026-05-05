@@ -39,7 +39,7 @@ export function Hero({ locale }: { locale: Locale }) {
   ];
 
   return (
-    <section className="relative pt-[100px] lg:pt-[112px] pb-10 lg:pb-16 overflow-hidden">
+    <section className="relative pt-[88px] lg:pt-[100px] pb-6 lg:pb-10 overflow-hidden">
       {/* animated mesh gradient + grain background */}
       <MeshGradient variant="warm" />
 
@@ -47,7 +47,7 @@ export function Hero({ locale }: { locale: Locale }) {
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
 
       <div className="container-wide relative">
-        <div className="grid lg:grid-cols-12 gap-x-10 lg:gap-x-14 gap-y-10 items-start">
+        <div className="grid lg:grid-cols-12 gap-x-10 lg:gap-x-14 gap-y-7 items-start">
           {/* copy column */}
           <div className="lg:col-span-7 lg:pt-6">
             <motion.div

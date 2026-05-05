@@ -30,8 +30,8 @@ html.lenis, html.lenis body { height: auto; }
   body {
     @apply bg-cream text-ink font-sans;
     font-feature-settings: "ss01", "kern";
-    font-size: 17.5px;
-    line-height: 1.65;
+    font-size: 18px;
+    line-height: 1.7;
   }
   ::selection { background: var(--brand); color: var(--cream); }
   h1, h2, h3, h4 {
@@ -193,7 +193,7 @@ html.lenis, html.lenis body { height: auto; }
 
   /* serif gold capitalised micro-label, replaces uppercase mono eyebrow */
   .micro-label {
-    @apply inline-flex items-center gap-2 text-[12px] font-medium tracking-tight text-gold/90;
+    @apply inline-flex items-center gap-2 text-[13px] font-medium tracking-tight text-gold/90;
   }
   .micro-label::before {
     content: "";

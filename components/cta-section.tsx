@@ -14,7 +14,7 @@ export function CtaSection({ locale }: { locale: Locale }) {
   return (
     <section
       id="contact"
-      className="relative py-14 lg:py-20 border-t border-line/70"
+      className="relative py-10 lg:py-14 border-t border-line/30"
     >
       <div className="container-wide">
         {/* STATEMENT PANEL — navy with gold mesh */}
@@ -39,7 +39,7 @@ export function CtaSection({ locale }: { locale: Locale }) {
                   {t.cta.title}
                 </h2>
 
-                <p className="mt-6 max-w-[52ch] text-[16.5px] leading-[1.7] text-cream/75 text-pretty">
+                <p className="mt-6 max-w-[52ch] text-[17.5px] leading-[1.7] text-cream/75 text-pretty">
                   {t.cta.subtitle}
                 </p>
 

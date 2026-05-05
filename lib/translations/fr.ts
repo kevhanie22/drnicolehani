@@ -22,8 +22,8 @@ export const fr: Translations = {
   },
   trustBar: ["Université Saint-Joseph", "Université Libanaise", "Hôpital Aboujaoudé", "UNICEF Liban", "Ministère de l'Éducation", "Tribunal Spirituel Maronite"],
   services: {
-    eyebrow: "Mes domaines",
-    title: "Une thérapie à chaque étape de la vie — Beyrouth & Mont-Liban.",
+    eyebrow: "Cabinet",
+    title: "Domaines d'intervention.",
     subtitle:
       "J'écoute d'abord. Chaque parcours s'adapte à la personne, jamais à l'étiquette.",
     items: [
@@ -88,7 +88,7 @@ export const fr: Translations = {
   },
   about: {
     eyebrow: "À propos",
-    title: "Trois décennies comme psychologue clinicienne au Liban.",
+    title: "Dr Nicole Hani.",
     body: [
       "Considérée comme l'une des principales psychologues cliniciennes du Liban, le Dr Nicole Absi Hani est thérapeute TCC à Beyrouth, forte de plus de trente ans de pratique. Elle est titulaire d'un Doctorat d'État (1ère catégorie) en Psychologie Clinique de l'Université Saint-Esprit de Kaslik (USEK), et certifiée en Thérapie Cognitivo-Comportementale.",
       "Depuis 1996, elle dirige son cabinet privé à Zouk Mosbeh, entourée d'une équipe pluridisciplinaire de psychiatres, orthophonistes, psychomotriciens et nutritionnistes. Elle est également Professeure de Neuropsychologie à l'Université Saint-Joseph et à l'Université Libanaise, psychologue consultante à l'Hôpital Aboujaoudé et à l'Hôpital Universitaire Saint-Joseph, et expert auprès du Tribunal Spirituel Maronite.",
@@ -124,7 +124,7 @@ export const fr: Translations = {
   },
   approach: {
     eyebrow: "Approche",
-    title: "La Thérapie Cognitivo-Comportementale, humanisée.",
+    title: "Ma manière de travailler.",
     subtitle:
       "Structurée, fondée sur les preuves, jamais réductrice. La TCC est le cadre ; la relation est le remède.",
     pillars: [
@@ -292,15 +292,15 @@ export const fr: Translations = {
   },
   welcome: {
     eyebrow: "Au cabinet",
-    title: "Le cabinet, en 45 secondes.",
-    body: "Un aperçu du cabinet et du travail qui s'y fait : thérapie pour enfants, TCC pour adultes, accompagnement de couple et de famille, bilans psychométriques.",
+    title: "Une courte visite du cabinet.",
+    body: "Quarante-cinq secondes à l'intérieur du cabinet à Zouk Mosbeh — thérapie pour enfants, TCC pour adultes, couple et famille, bilans psychométriques.",
     cta: "Lire",
     duration: "0:45",
   },
   articles: {
-    eyebrow: "Dans la presse écrite",
-    title: "Citée dans les médias libanais et panarabes.",
-    body: "Sollicitée pour son expertise sur la santé mentale, la parentalité, l'éducation, et les conditions sociales qui façonnent les familles libanaises.",
+    eyebrow: "Presse écrite",
+    title: "Presse.",
+    body: "Citée dans Almashhad, MTV Liban et Foochia sur la santé mentale, la parentalité et l'éducation.",
     readCta: "Lire l'article",
     items: [
       {
@@ -339,8 +339,8 @@ export const fr: Translations = {
   },
   press: {
     eyebrow: "À l'antenne",
-    title: "Sur les écrans nationaux.",
-    body: "Sollicitée par les chaînes libanaises et panarabes pour son regard sur la santé mentale, la parentalité, et les conditions sociales qui façonnent les deux.",
+    title: "Télévision.",
+    body: "Interventions télévisées sur la santé mentale, la parentalité et les conditions sociales libanaises — sur Sky News Arabia, Al Jadeed et MTV Liban.",
     watchCta: "Regarder l'interview",
     items: [
       {
@@ -374,8 +374,8 @@ export const fr: Translations = {
     ],
   },
   cta: {
-    title: "Quand vous êtes prêt(e), je suis là — à Beyrouth, ou en ligne partout au Liban.",
-    subtitle: "Une première séance dure cinquante minutes. Pas d'étiquettes, pas de jugement, juste un point de départ.",
+    title: "Prendre rendez-vous.",
+    subtitle: "Cinquante minutes. Au cabinet, ou en visio. Sans étiquette, sans jugement.",
     primary: "Prendre rendez-vous",
     secondary: "Envoyer un WhatsApp",
   },

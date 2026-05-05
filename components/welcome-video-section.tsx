@@ -40,7 +40,7 @@ export function WelcomeVideoSection({ locale }: { locale: Locale }) {
   return (
     <section
       id="welcome"
-      className="relative py-14 lg:py-20 border-t border-line/70 overflow-hidden"
+      className="relative py-10 lg:py-14 border-t border-line/30 overflow-hidden"
     >
       <div
         aria-hidden
@@ -52,14 +52,14 @@ export function WelcomeVideoSection({ locale }: { locale: Locale }) {
       />
 
       <div className="container-wide relative">
-        <div className="grid lg:grid-cols-12 gap-x-10 gap-y-10 items-center">
+        <div className="grid lg:grid-cols-12 gap-x-10 gap-y-7 items-center">
           {/* Copy column */}
           <FadeUp className="lg:col-span-4 lg:order-1 order-2">
             <p className="micro-label">{t.welcome.eyebrow}</p>
             <h2 className="mt-4 font-serif text-display-lg text-ink text-balance">
               {t.welcome.title}
             </h2>
-            <p className="mt-5 max-w-md text-[15.5px] leading-[1.65] text-muted text-pretty">
+            <p className="mt-5 max-w-md text-[16.5px] leading-[1.65] text-muted text-pretty">
               {t.welcome.body}
             </p>
 

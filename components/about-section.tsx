@@ -21,7 +21,7 @@ export function AboutSection({ locale, compact = false }: { locale: Locale; comp
   return (
     <section
       id="about"
-      className="relative py-14 lg:py-20 border-t border-line/70 overflow-hidden"
+      className="relative py-10 lg:py-14 border-t border-line/30 overflow-hidden"
     >
       <div
         aria-hidden
@@ -34,7 +34,7 @@ export function AboutSection({ locale, compact = false }: { locale: Locale; comp
 
       <div className="container-wide relative">
         {/* Section heading */}
-        <FadeUp className="max-w-2xl mb-12">
+        <FadeUp className="max-w-2xl mb-7">
           <p className="micro-label">{t.about.eyebrow}</p>
           <h2 className="mt-4 font-serif text-display-lg text-ink text-balance">
             {t.about.title}
@@ -42,7 +42,7 @@ export function AboutSection({ locale, compact = false }: { locale: Locale; comp
         </FadeUp>
 
         {/* Editorial 2-col: portrait left, body+quote right */}
-        <div className="grid lg:grid-cols-12 gap-x-12 gap-y-10 items-center">
+        <div className="grid lg:grid-cols-12 gap-x-12 gap-y-7 items-center">
           <FadeUp className="lg:col-span-5">
             <div className="relative max-w-[480px] mx-auto lg:mx-0">
               <div
@@ -113,7 +113,7 @@ export function AboutSection({ locale, compact = false }: { locale: Locale; comp
         </div>
 
         {/* Capsule stats — full-width strip below the editorial spread */}
-        <FadeUp delay={0.2} className="mt-14 lg:mt-16">
+        <FadeUp delay={0.2} className="mt-8 lg:mt-10">
           <div className="grid grid-cols-2 lg:grid-cols-4 rounded-2xl surface-card divide-y divide-x divide-line/70 overflow-hidden lg:divide-y-0">
             {capsule.map((c) => (
               <div key={c.label} className="px-6 py-6 lg:px-8 lg:py-7 text-center lg:text-left">

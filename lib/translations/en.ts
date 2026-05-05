@@ -20,8 +20,8 @@ export const en = {
   },
   trustBar: ["Saint Joseph University", "Lebanese University", "Aboujaoudé Hospital", "UNICEF Lebanon", "Ministry of Education", "Maronite Spiritual Court"],
   services: {
-    eyebrow: "What I treat",
-    title: "Therapy at every stage of life — Beirut & Mount Lebanon.",
+    eyebrow: "Practice",
+    title: "What I treat.",
     subtitle:
       "I listen first. Each course of work is shaped around who you are, not what label fits.",
     items: [
@@ -86,7 +86,7 @@ export const en = {
   },
   about: {
     eyebrow: "About",
-    title: "Three decades as a clinical psychologist in Lebanon.",
+    title: "About Dr. Nicole Hani.",
     body: [
       "Widely regarded as one of the leading clinical psychologists in Lebanon, Dr. Nicole Absi Hani is a CBT therapist in Beirut with over thirty years of practice. She holds a State PhD (1st category) in Clinical Psychology from the Holy Spirit University of Kaslik (USEK), and is certified in Cognitive Behavioral Therapy.",
       "Since 1996, she has led her private practice in Zouk Mosbeh, surrounded by a multidisciplinary team of psychiatrists, speech and psychomotor therapists, and nutritionists. She also serves as Professor of Neuropsychology at Saint Joseph University and Lebanese University, consultant psychologist at Aboujaoudé Hospital and Saint Joseph University Hospital, and forensic expert with the Maronite Spiritual Court.",
@@ -122,7 +122,7 @@ export const en = {
   },
   approach: {
     eyebrow: "Approach",
-    title: "Cognitive Behavioral Therapy, kept human.",
+    title: "How I work.",
     subtitle:
       "Structured, evidence-based, and never reductive. CBT is the framework; the relationship is the medicine.",
     pillars: [
@@ -302,15 +302,15 @@ export const en = {
   },
   welcome: {
     eyebrow: "Inside the clinic",
-    title: "The practice, in 45 seconds.",
-    body: "A short overview of the clinic and the work done here — children's therapy, CBT for adults, couple and family support, and psychometric testing.",
+    title: "A short tour of the practice.",
+    body: "Forty-five seconds inside the clinic in Zouk Mosbeh — children's therapy, CBT for adults, couple and family work, and psychometric testing.",
     cta: "Play",
     duration: "0:45",
   },
   articles: {
     eyebrow: "In print",
-    title: "Quoted across Lebanese and pan-Arab media.",
-    body: "Sought out for expert commentary on mental health, parenting, education, and the social conditions shaping Lebanese families.",
+    title: "Press.",
+    body: "Quoted in Almashhad, MTV Lebanon, and Foochia on mental health, parenting, and education.",
     readCta: "Read the article",
     items: [
       {
@@ -349,8 +349,8 @@ export const en = {
   },
   press: {
     eyebrow: "On air",
-    title: "Featured on national television.",
-    body: "Sought out by Lebanese and pan-Arab broadcasters for her perspective on mental health, parenting, and the social conditions that shape both.",
+    title: "Television.",
+    body: "Television interviews on mental health, parenting, and the social conditions of Lebanese family life — across Sky News Arabia, Al Jadeed, and MTV Lebanon.",
     watchCta: "Watch the full interview",
     items: [
       {
@@ -384,8 +384,8 @@ export const en = {
     ],
   },
   cta: {
-    title: "When you're ready, I'm here — in Beirut, or online across Lebanon.",
-    subtitle: "A first session is fifty minutes. No labels, no judgment, just a place to start.",
+    title: "Book a first session.",
+    subtitle: "Fifty minutes. In person at the clinic, or by video. No labels, no judgment.",
     primary: "Book a session",
     secondary: "Send a WhatsApp",
   },
