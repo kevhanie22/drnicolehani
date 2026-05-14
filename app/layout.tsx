@@ -133,7 +133,8 @@ const physicianSchema = {
   sameAs: [
     "https://www.instagram.com/dr_nicolehani/",
     "https://www.facebook.com/nicolehanipsychologist/",
-    "https://www.linkedin.com/in/dr-nicole-absi-hani-595335224/",
+    "https://www.linkedin.com/in/dr-nicole-absi-hani-595335224",
+    "https://youtube.com/@dr.nicolehani7689",
   ],
   worksFor: [
     { "@type": "Hospital", name: "Saint Joseph University Hospital", address: "Dora, Beirut, Lebanon" },
@@ -212,7 +213,8 @@ const medicalBusinessSchema = {
   sameAs: [
     "https://www.instagram.com/dr_nicolehani/",
     "https://www.facebook.com/nicolehanipsychologist/",
-    "https://www.linkedin.com/in/dr-nicole-absi-hani-595335224/",
+    "https://www.linkedin.com/in/dr-nicole-absi-hani-595335224",
+    "https://youtube.com/@dr.nicolehani7689",
   ],
 };
 
@@ -235,7 +237,8 @@ const organizationSchema = {
   sameAs: [
     "https://www.instagram.com/dr_nicolehani/",
     "https://www.facebook.com/nicolehanipsychologist/",
-    "https://www.linkedin.com/in/dr-nicole-absi-hani-595335224/",
+    "https://www.linkedin.com/in/dr-nicole-absi-hani-595335224",
+    "https://youtube.com/@dr.nicolehani7689",
   ],
 };
 

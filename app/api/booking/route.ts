@@ -62,6 +62,75 @@ ${escapeHtml(p.message)}
   return { html, text };
 }
 
+async function deliverWithResend(opts: {
+  apiKey: string;
+  name: string;
+  email: string;
+  message: string;
+  phone?: string;
+  service?: string;
+}) {
+  const fromAddress = process.env.BOOKING_FROM_EMAIL ?? "Dr. Nicole Hani <onboarding@resend.dev>";
+  const { html, text } = buildEmail(opts);
+  const res = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${opts.apiKey}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      from: fromAddress,
+      to: [site.email],
+      reply_to: opts.email,
+      subject: `Session request — ${opts.name}`,
+      html,
+      text,
+    }),
+  });
+  if (!res.ok) {
+    const errBody = await res.text();
+    throw new Error(`Resend ${res.status}: ${errBody}`);
+  }
+}
+
+/**
+ * FormSubmit zero-signup delivery. POSTs to formsubmit.co/ajax/{email}.
+ *
+ * First-ever submission triggers a one-time activation email to
+ * nicoleabsi71@gmail.com — clicking the link in it enables forwarding for
+ * good. All subsequent submissions arrive directly in the inbox.
+ *
+ * Docs: https://formsubmit.co/
+ */
+async function deliverWithFormSubmit(opts: {
+  name: string;
+  email: string;
+  message: string;
+  phone?: string;
+  service?: string;
+}) {
+  const endpoint = `https://formsubmit.co/ajax/${encodeURIComponent(site.email)}`;
+  const res = await fetch(endpoint, {
+    method: "POST",
+    headers: { "Content-Type": "application/json", Accept: "application/json" },
+    body: JSON.stringify({
+      Name: opts.name,
+      Email: opts.email,
+      Phone: opts.phone || "—",
+      About: opts.service || "—",
+      Message: opts.message,
+      _subject: `Session request — ${opts.name}`,
+      _replyto: opts.email,
+      _captcha: "false",
+      _template: "table",
+    }),
+  });
+  if (!res.ok) {
+    const errBody = await res.text();
+    throw new Error(`FormSubmit ${res.status}: ${errBody}`);
+  }
+}
+
 export async function POST(req: Request) {
   let body: BookingPayload;
   try {
@@ -74,57 +143,25 @@ export async function POST(req: Request) {
   if (!name || !email || !message) {
     return NextResponse.json({ ok: false, error: "missing_fields" }, { status: 400 });
   }
-
-  // Basic email shape check
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     return NextResponse.json({ ok: false, error: "invalid_email" }, { status: 400 });
   }
 
-  const apiKey = process.env.RESEND_API_KEY;
-  if (!apiKey) {
-    // No key wired up yet — keep the local-dev path working so the form
-    // still resolves "success" and we can see submissions in logs.
-    // eslint-disable-next-line no-console
-    console.warn("[booking-request] RESEND_API_KEY missing — request not delivered", {
-      receivedAt: new Date().toISOString(),
-      ...body,
-    });
-    return NextResponse.json({ ok: true, delivery: "logged" });
-  }
+  const payload = { name, email, message, phone: body.phone, service: body.service };
 
-  const fromAddress = process.env.BOOKING_FROM_EMAIL ?? "Dr. Nicole Hani <onboarding@resend.dev>";
-  const replyTo = email;
-  const { html, text } = buildEmail({ name, email, message, phone: body.phone, service: body.service });
-  const subject = `Session request — ${name}`;
-
+  // Preferred path: Resend (set RESEND_API_KEY in Vercel for production-grade
+  // delivery + branded HTML email). Falls back to FormSubmit otherwise.
+  const resendKey = process.env.RESEND_API_KEY;
   try {
-    const res = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        from: fromAddress,
-        to: [site.email],
-        reply_to: replyTo,
-        subject,
-        html,
-        text,
-      }),
-    });
-
-    if (!res.ok) {
-      const errBody = await res.text();
-      // eslint-disable-next-line no-console
-      console.error("[booking-request] Resend rejected", res.status, errBody);
-      return NextResponse.json({ ok: false, error: "delivery_failed" }, { status: 502 });
+    if (resendKey) {
+      await deliverWithResend({ apiKey: resendKey, ...payload });
+      return NextResponse.json({ ok: true, delivery: "resend" });
     }
-
-    return NextResponse.json({ ok: true, delivery: "sent" });
+    await deliverWithFormSubmit(payload);
+    return NextResponse.json({ ok: true, delivery: "formsubmit" });
   } catch (err) {
     // eslint-disable-next-line no-console
-    console.error("[booking-request] Resend fetch threw", err);
+    console.error("[booking-request] delivery failed", err);
     return NextResponse.json({ ok: false, error: "delivery_failed" }, { status: 502 });
   }
 }

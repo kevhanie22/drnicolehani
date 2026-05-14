@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Instagram, Facebook, Linkedin, Mail, Phone, MessageCircle } from "lucide-react";
+import { Instagram, Facebook, Linkedin, Youtube, Mail, Phone, MessageCircle } from "lucide-react";
 import { type Locale } from "@/lib/i18n";
 import { getT } from "@/lib/translations";
 import { site } from "@/lib/site";
@@ -38,6 +38,10 @@ export function Footer({ locale }: { locale: Locale }) {
               <a href={site.socials.facebook} target="_blank" rel="noreferrer" aria-label="Facebook"
                  className="h-10 w-10 inline-flex items-center justify-center rounded-full border border-cream/15 hover:border-gold hover:text-gold transition-colors">
                 <Facebook className="h-4 w-4" strokeWidth={1.6} />
+              </a>
+              <a href={site.socials.youtube} target="_blank" rel="noreferrer" aria-label="YouTube"
+                 className="h-10 w-10 inline-flex items-center justify-center rounded-full border border-cream/15 hover:border-gold hover:text-gold transition-colors">
+                <Youtube className="h-4 w-4" strokeWidth={1.6} />
               </a>
               <a href={site.socials.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn"
                  className="h-10 w-10 inline-flex items-center justify-center rounded-full border border-cream/15 hover:border-gold hover:text-gold transition-colors">

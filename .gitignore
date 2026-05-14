@@ -11,3 +11,4 @@ out
 .playwright-mcp/
 dnh-audit/
 dnh-final/
+tsconfig.tsbuildinfo
