@@ -18,7 +18,7 @@ export const site = {
   socials: {
     instagram: "https://www.instagram.com/dr_nicolehani/",
     facebook: "https://www.facebook.com/nicolehanipsychologist/",
-    linkedin: "https://www.linkedin.com/in/dr-nicole-absi-hani-595335224/",
+    linkedin: "https://www.linkedin.com/in/dr-nicole-absi-hani-595335224",
   },
   locations: [
     {

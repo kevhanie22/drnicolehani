@@ -4,10 +4,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Instagram, Facebook } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { type Locale } from "@/lib/i18n";
 import { getT } from "@/lib/translations";
+import { site } from "@/lib/site";
 
 export function Nav({ locale }: { locale: Locale }) {
   const t = getT(locale);
@@ -104,7 +105,28 @@ export function Nav({ locale }: { locale: Locale }) {
             })}
           </nav>
 
-          <div className="hidden lg:flex items-center gap-5">
+          <div className="hidden lg:flex items-center gap-4">
+            <div className="flex items-center gap-1.5">
+              <a
+                href={site.socials.instagram}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Instagram — Dr. Nicole Hani"
+                className="inline-flex h-8 w-8 items-center justify-center rounded-full text-ink/55 hover:text-brand hover:bg-cream/60 transition-colors"
+              >
+                <Instagram className="h-4 w-4" strokeWidth={1.7} />
+              </a>
+              <a
+                href={site.socials.facebook}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Facebook — Dr. Nicole Hani"
+                className="inline-flex h-8 w-8 items-center justify-center rounded-full text-ink/55 hover:text-brand hover:bg-cream/60 transition-colors"
+              >
+                <Facebook className="h-4 w-4" strokeWidth={1.7} />
+              </a>
+            </div>
+            <span aria-hidden className="h-4 w-px bg-line/80" />
             <Link
               href={otherPath}
               className="text-[12px] tracking-[0.12em] uppercase text-ink/55 hover:text-brand transition-colors"
@@ -164,6 +186,28 @@ export function Nav({ locale }: { locale: Locale }) {
                 >
                   <span className="text-[12px] tracking-[0.16em] uppercase">{otherLocale}</span>
                 </Link>
+              </div>
+
+              {/* Social row */}
+              <div className="mt-8 pt-6 border-t border-line/60 flex items-center gap-3">
+                <a
+                  href={site.socials.instagram}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Instagram — Dr. Nicole Hani"
+                  className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-line/70 text-ink/70 hover:text-brand hover:border-brand/40 transition-colors"
+                >
+                  <Instagram className="h-5 w-5" strokeWidth={1.6} />
+                </a>
+                <a
+                  href={site.socials.facebook}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Facebook — Dr. Nicole Hani"
+                  className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-line/70 text-ink/70 hover:text-brand hover:border-brand/40 transition-colors"
+                >
+                  <Facebook className="h-5 w-5" strokeWidth={1.6} />
+                </a>
               </div>
             </motion.nav>
           </motion.div>
