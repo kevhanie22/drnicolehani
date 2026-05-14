@@ -37,7 +37,7 @@ function FacebookPoster({ outlet }: { outlet: string }) {
       />
       <div className="absolute inset-0 grain-overlay-light opacity-60" />
       <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 px-6 text-center">
-        <p className="font-serif italic text-cream/95 text-[28px] leading-tight tracking-tight">
+        <p className="font-serif text-cream/95 text-[26px] leading-tight tracking-[-0.005em]">
           {outlet}
         </p>
         <div className="mx-auto mt-3 h-px w-12 bg-gold/70" />
@@ -58,7 +58,7 @@ function PressCard({ item, watchCta, locale }: { item: Item; watchCta: string; l
         )}&show_text=false&autoplay=true&width=560`;
 
   return (
-    <article className="group relative overflow-hidden rounded-2xl surface-card transition-all duration-500 hover:-translate-y-0.5 hover:shadow-[0_24px_48px_-24px_rgba(11,18,32,0.18)]">
+    <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl surface-card transition-all duration-500 hover:-translate-y-0.5 hover:shadow-[0_24px_48px_-24px_rgba(11,18,32,0.18)]">
       <span className="gold-line-grow rounded-t-2xl" aria-hidden />
       <div className="relative aspect-video bg-brand-deep overflow-hidden rounded-t-2xl">
         {!playing ? (
@@ -85,22 +85,18 @@ function PressCard({ item, watchCta, locale }: { item: Item; watchCta: string; l
             )}
 
             <motion.div
-              animate={reduce ? {} : { scale: [1, 1.06, 1] }}
-              transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
+              animate={reduce ? {} : { scale: [1, 1.04, 1] }}
+              transition={{ duration: 2.8, repeat: Infinity, ease: "easeInOut" }}
               className="absolute inset-0 flex items-center justify-center"
             >
               <span className="relative inline-flex h-12 w-12 items-center justify-center rounded-full bg-gold text-brand-deep shadow-[0_18px_40px_-12px_rgba(0,0,0,0.45)] transition-transform duration-300 group-hover:scale-110">
-                {!reduce && (
-                  <span className="absolute inset-0 -m-1.5 rounded-full bg-gold/30 animate-ping" />
-                )}
                 <Play className="relative h-4 w-4 fill-brand-deep ml-0.5" strokeWidth={1.4} />
               </span>
             </motion.div>
 
-            <div className="absolute top-2.5 left-2.5 inline-flex items-center gap-1.5 rounded-full bg-white/90 backdrop-blur px-2 py-0.5 ring-1 ring-white/60">
-              <span className="h-1.5 w-1.5 rounded-full bg-red-500" />
-              <span className="text-[9.5px] font-medium tracking-wider uppercase text-ink">
-                {locale === "fr" ? "Vidéo" : "Video"}
+            <div className="absolute top-2.5 left-2.5 inline-flex items-center rounded-full bg-white/85 backdrop-blur px-2.5 py-1 ring-1 ring-white/60">
+              <span className="text-[9.5px] font-medium tracking-[0.14em] uppercase text-ink/75">
+                {locale === "fr" ? "Interview" : "Interview"}
               </span>
             </div>
           </button>
@@ -115,18 +111,18 @@ function PressCard({ item, watchCta, locale }: { item: Item; watchCta: string; l
         )}
       </div>
 
-      <div className="p-4 lg:p-5">
-        <p className="font-mono text-[10px] tracking-[0.16em] uppercase text-gold leading-tight">
+      <div className="flex flex-1 flex-col p-4 lg:p-5">
+        <p className="eyebrow-mono text-gold/85 leading-tight">
           {item.outlet}
         </p>
-        <h3 className="mt-2 font-serif text-[15px] leading-[1.3] text-ink text-balance">
+        <h3 className="mt-2 font-serif text-[15px] leading-[1.3] text-ink text-balance line-clamp-2">
           {item.topic}
         </h3>
         <a
           href={item.url}
           target="_blank"
           rel="noreferrer"
-          className="mt-3 inline-flex items-center gap-1 text-[11.5px] text-muted hover:text-brand transition-colors"
+          className="mt-auto pt-3 inline-flex items-center gap-1 text-[11.5px] text-muted hover:text-brand transition-colors"
           onClick={(e) => e.stopPropagation()}
         >
           {watchCta}
@@ -143,7 +139,7 @@ export function PressSection({ locale }: { locale: Locale }) {
   return (
     <section
       id="press"
-      className="relative py-10 lg:py-14 border-t border-line/30 overflow-hidden"
+      className="relative section-pad section-divider overflow-hidden"
     >
       <div
         aria-hidden
@@ -169,13 +165,13 @@ export function PressSection({ locale }: { locale: Locale }) {
           </div>
         </FadeUp>
 
-        {/* Channel ribbon — quiet credibility wall */}
+        {/* Channel ribbon — quiet credibility wall (neutral, third-party voice) */}
         <FadeUp delay={0.05}>
-          <div className="mb-8 flex flex-wrap items-center justify-center gap-x-10 gap-y-3 py-4 border-y border-line/60">
+          <div className="mb-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 py-4 border-y border-line/60">
             {[...new Set(items.map((i) => i.outlet))].map((outlet) => (
               <span
                 key={outlet}
-                className="font-serif italic text-[15px] text-muted/80"
+                className="text-[11px] tracking-[0.14em] uppercase text-muted/65 font-medium"
               >
                 {outlet}
               </span>

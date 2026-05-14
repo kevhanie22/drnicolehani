@@ -7,6 +7,26 @@ import { ArticlesSection } from "@/components/articles-section";
 import { CtaSection } from "@/components/cta-section";
 import { type Locale, isLocale } from "@/lib/i18n";
 
+export function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+  const lc: Locale = isLocale(locale) ? locale : "en";
+  const isFr = lc === "fr";
+  return {
+    title: isFr
+      ? "Dr Nicole Hani — Psychologue clinicienne · TCC · Beyrouth"
+      : "Dr. Nicole Hani — Clinical Psychologist in Lebanon · CBT Therapist · Beirut",
+    description: isFr
+      ? "Dr Nicole Absi Hani — psychologue clinicienne et thérapeute TCC à Beyrouth. 30+ ans d'exercice. Enfants, adultes, couples. Séances en arabe, anglais et français."
+      : "Dr. Nicole Absi Hani — clinical psychologist and CBT therapist in Beirut with 30+ years of practice. Children, adults, and couples. Sessions in Arabic, English, and French.",
+    alternates: {
+      canonical: isFr ? "/fr" : "/",
+      languages: { en: "/", fr: "/fr", "x-default": "/" },
+    },
+    openGraph: {
+      locale: isFr ? "fr_FR" : "en_US",
+    },
+  };
+}
+
 export default function HomePage({ params: { locale } }: { params: { locale: string } }) {
   const lc: Locale = isLocale(locale) ? locale : "en";
   return (

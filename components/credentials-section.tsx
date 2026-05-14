@@ -9,7 +9,7 @@ export function CredentialsSection({ locale }: { locale: Locale }) {
   return (
     <section
       id="credentials"
-      className="relative py-14 lg:py-20 border-t border-line/70 overflow-hidden"
+      className="relative section-pad section-divider overflow-hidden"
     >
       <div
         aria-hidden
@@ -72,7 +72,7 @@ export function CredentialsSection({ locale }: { locale: Locale }) {
         <FadeUp className="grid lg:grid-cols-12 gap-x-12 gap-y-6 mb-10">
           <div className="lg:col-span-8">
             <p className="micro-label">{t.credentials.eyebrow}</p>
-            <h2 className="mt-4 font-serif text-[2rem] lg:text-[2.4rem] leading-[1.08] tracking-[-0.02em] text-ink text-balance">
+            <h2 className="mt-4 font-serif text-display-lg text-ink text-balance">
               {t.credentials.title}
             </h2>
           </div>

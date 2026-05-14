@@ -6,3 +6,8 @@ out
 .DS_Store
 *.log
 .vercel
+
+# screenshot dumps from QA / Playwright runs — never commit
+.playwright-mcp/
+dnh-audit/
+dnh-final/

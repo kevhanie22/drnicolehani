@@ -24,12 +24,20 @@ export function Nav({ locale }: { locale: Locale }) {
 
   useEffect(() => setOpen(false), [pathname]);
 
+  useEffect(() => {
+    if (typeof document === "undefined") return;
+    document.body.dataset.menuOpen = open ? "true" : "false";
+    return () => {
+      document.body.dataset.menuOpen = "false";
+    };
+  }, [open]);
+
   const base = locale === "en" ? "" : `/${locale}`;
+  // primary nav items only — Contact lives on the CTA button alone (no duplicate "Book a Session" link in mobile menu)
   const items = [
     { href: `${base}/about`, label: t.nav.about },
     { href: `${base}/services`, label: t.nav.services },
     { href: `${base}/blog`, label: t.nav.blog },
-    { href: `${base}/contact`, label: t.nav.contact },
   ];
 
   const otherLocale: Locale = locale === "en" ? "fr" : "en";
@@ -51,9 +59,9 @@ export function Nav({ locale }: { locale: Locale }) {
             : "bg-transparent"
         )}
       >
-        <div className="container-edge flex items-center justify-between h-[88px]">
+        <div className="container-wide flex items-center justify-between h-[88px]">
           <Link href={base || "/"} className="group flex items-center gap-3" aria-label="Dr. Nicole Hani — Home">
-            <span className="relative inline-flex h-12 w-12 lg:h-14 lg:w-14 items-center justify-center">
+            <span className="relative inline-flex h-11 w-11 lg:h-12 lg:w-12 items-center justify-center">
               <Image
                 src="/images/logo-mark.png"
                 alt="Dr. Nicole Hani logo"
@@ -64,9 +72,9 @@ export function Nav({ locale }: { locale: Locale }) {
               />
             </span>
             <span className="hidden sm:flex flex-col leading-tight">
-              <span className="font-serif text-[18px] text-ink tracking-tight">Dr. Nicole Hani</span>
-              <span className="font-mono text-[9.5px] tracking-[0.22em] uppercase text-muted">
-                {locale === "fr" ? "Psychologue Clinicienne · TCC" : "Clinical Psychologist · CBT"}
+              <span className="font-serif text-[19px] text-ink tracking-tight">Dr. Nicole Hani</span>
+              <span className="font-serif italic text-[12px] text-muted/85">
+                {locale === "fr" ? "Psychologue clinicienne · TCC" : "Clinical Psychologist · CBT"}
               </span>
             </span>
           </Link>
@@ -79,8 +87,8 @@ export function Nav({ locale }: { locale: Locale }) {
                   key={it.href}
                   href={it.href}
                   className={cn(
-                    "relative font-mono text-[11px] tracking-[0.18em] uppercase transition-colors",
-                    active ? "text-brand" : "text-ink/65 hover:text-brand"
+                    "relative text-[13.5px] tracking-tight transition-colors",
+                    active ? "text-brand font-medium" : "text-ink/70 hover:text-brand"
                   )}
                 >
                   {it.label}
@@ -99,12 +107,12 @@ export function Nav({ locale }: { locale: Locale }) {
           <div className="hidden lg:flex items-center gap-5">
             <Link
               href={otherPath}
-              className="font-mono text-[11px] tracking-[0.18em] uppercase text-ink/65 hover:text-brand transition-colors"
+              className="text-[12px] tracking-[0.12em] uppercase text-ink/55 hover:text-brand transition-colors"
               aria-label={`Switch to ${otherLocale.toUpperCase()}`}
             >
               {locale === "fr" ? "EN" : "FR"}
             </Link>
-            <Link href={`${base}/contact`} className="btn-primary !py-2.5 !px-5 !text-[12px]">
+            <Link href={`${base}/contact`} className="btn-primary !py-2.5 !px-5 !text-[12.5px]">
               {t.nav.bookNow}
             </Link>
           </div>
@@ -127,7 +135,7 @@ export function Nav({ locale }: { locale: Locale }) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
-            className="lg:hidden fixed inset-0 z-30 bg-cream pt-[88px]"
+            className="lg:hidden fixed inset-0 z-[55] bg-cream pt-[88px]"
           >
             <motion.nav
               initial={{ y: -10, opacity: 0 }}
@@ -154,7 +162,7 @@ export function Nav({ locale }: { locale: Locale }) {
                   className="btn-secondary !px-5"
                   aria-label={`Switch to ${otherLocale.toUpperCase()}`}
                 >
-                  <span className="font-mono uppercase tracking-wider">{otherLocale}</span>
+                  <span className="text-[12px] tracking-[0.16em] uppercase">{otherLocale}</span>
                 </Link>
               </div>
             </motion.nav>

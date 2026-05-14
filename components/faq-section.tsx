@@ -12,7 +12,7 @@ export function FaqSection({ locale }: { locale: Locale }) {
   return (
     <section
       id="faq"
-      className="relative py-14 lg:py-20 border-t border-line/70 overflow-hidden"
+      className="relative section-pad section-divider overflow-hidden"
     >
       <div
         aria-hidden
@@ -25,7 +25,7 @@ export function FaqSection({ locale }: { locale: Locale }) {
       <div className="container-wide relative grid lg:grid-cols-12 gap-x-12 gap-y-8">
         <FadeUp className="lg:col-span-4 lg:sticky lg:top-32 self-start">
           <p className="micro-label">{t.faq.eyebrow}</p>
-          <h2 className="mt-4 font-serif text-[2rem] lg:text-[2.4rem] leading-[1.08] tracking-[-0.02em] text-ink text-balance">
+          <h2 className="mt-4 font-serif text-display-lg text-ink text-balance">
             {t.faq.title}
           </h2>
           <p className="mt-5 text-[14.5px] leading-[1.65] text-muted max-w-[34ch]">

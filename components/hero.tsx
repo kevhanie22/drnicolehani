@@ -19,22 +19,22 @@ export function Hero({ locale }: { locale: Locale }) {
     {
       icon: ShieldCheck,
       value: "30",
-      label: locale === "fr" ? "ans de pratique" : "years in practice",
+      label: locale === "fr" ? "ans d'exercice" : "years in practice",
     },
     {
       icon: Users2,
       value: "10,000+",
-      label: locale === "fr" ? "patients accompagnés" : "patients seen",
+      label: locale === "fr" ? "patients suivis" : "patients seen",
     },
     {
       icon: Languages,
       value: "3",
-      label: locale === "fr" ? "langues cliniques" : "clinical languages",
+      label: locale === "fr" ? "langues" : "languages",
     },
     {
       icon: MapPin,
       value: "3",
-      label: locale === "fr" ? "lieux de consultation" : "consulting locations",
+      label: locale === "fr" ? "cabinets" : "locations",
     },
   ];
 
@@ -109,9 +109,9 @@ export function Hero({ locale }: { locale: Locale }) {
                 href={site.phone.whatsappLink}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-ink/15 bg-transparent text-ink px-6 py-3 text-[14px] font-medium tracking-tight transition-all duration-300 hover:bg-ink hover:text-cream hover:border-ink w-full sm:w-auto"
+                className="btn-secondary w-full sm:w-auto"
               >
-                <MessageCircle className="h-4 w-4 text-[#25D366]" strokeWidth={1.8} />
+                <MessageCircle className="h-4 w-4 text-gold" strokeWidth={1.8} />
                 {locale === "fr" ? "Poser une question" : "Ask a question"}
               </a>
             </motion.div>

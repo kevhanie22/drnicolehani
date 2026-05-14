@@ -14,8 +14,10 @@ export function Cursor() {
 
   useEffect(() => {
     const finePointer = window.matchMedia("(pointer: fine)").matches;
+    const hasHover = window.matchMedia("(hover: hover)").matches;
+    const wideEnough = window.matchMedia("(min-width: 1024px)").matches;
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (!finePointer || reduce) return;
+    if (!finePointer || !hasHover || !wideEnough || reduce) return;
     setEnabled(true);
 
     const onMove = (e: MouseEvent) => {

@@ -11,17 +11,10 @@ export function AboutSection({ locale, compact = false }: { locale: Locale; comp
   const base = locale === "en" ? "" : `/${locale}`;
   const paragraphs = compact ? t.about.body.slice(0, 1) : t.about.body;
 
-  const capsule = [
-    { value: "30+", label: locale === "fr" ? "années de pratique" : "years in practice" },
-    { value: "10,000+", label: locale === "fr" ? "patients accompagnés" : "patients accompanied" },
-    { value: "3", label: locale === "fr" ? "hôpitaux & cliniques" : "hospitals & clinics" },
-    { value: "2", label: locale === "fr" ? "universités enseignées" : "universities teaching" },
-  ];
-
   return (
     <section
       id="about"
-      className="relative py-10 lg:py-14 border-t border-line/30 overflow-hidden"
+      className="relative section-pad section-divider overflow-hidden"
     >
       <div
         aria-hidden
@@ -52,12 +45,12 @@ export function AboutSection({ locale, compact = false }: { locale: Locale; comp
               <div className="relative aspect-[4/5] w-full rounded-[20px] overflow-hidden bg-line shadow-[0_30px_70px_-30px_rgba(11,18,32,0.28)] ring-1 ring-white/40">
                 <Image
                   src="/images/dr-nicole-portrait.jpg"
-                  alt="Dr. Nicole Absi Hani at the practice in Zouk Mosbeh, Lebanon"
+                  alt="Dr. Nicole Absi Hani — clinical psychologist and CBT therapist, portrait at her Zouk Mosbeh practice"
                   fill
                   sizes="(max-width: 1024px) 100vw, 480px"
-                  className="object-cover object-center"
+                  className="object-cover object-[center_20%]"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-brand-deep/55 via-brand-deep/15 to-transparent pointer-events-none" />
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-brand-deep/65 via-brand-deep/20 to-transparent pointer-events-none" />
                 <div className="absolute inset-x-0 bottom-0 p-5">
                   <p className="font-serif italic text-[14px] text-cream/95 leading-tight">
                     {locale === "fr"
@@ -95,38 +88,24 @@ export function AboutSection({ locale, compact = false }: { locale: Locale; comp
               <blockquote className="relative font-serif italic text-[20px] lg:text-[22px] leading-[1.35] tracking-[-0.01em] text-ink/90 text-balance max-w-[40ch]">
                 {t.about.quote}
               </blockquote>
-              <figcaption className="relative mt-4 flex items-center gap-3">
-                <span className="h-px w-10 bg-gold" />
-                <span className="text-[12px] tracking-tight text-muted">
-                  Dr. Nicole Absi Hani
+              <figcaption className="relative mt-4 flex items-center justify-between gap-3">
+                <span className="inline-flex items-center gap-3">
+                  <span className="h-px w-10 bg-gold" />
+                  <span className="text-[12px] tracking-tight text-muted">
+                    Dr. Nicole Absi Hani
+                  </span>
                 </span>
+                <Link
+                  href={`${base}/about`}
+                  className="inline-flex items-center gap-1.5 text-[13px] text-brand font-medium hover:text-brand-deep transition-colors group"
+                >
+                  {locale === "fr" ? "Lire le parcours" : "Read the biography"}
+                  <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" strokeWidth={1.8} />
+                </Link>
               </figcaption>
             </figure>
-
-            <div className="mt-6">
-              <Link href={`${base}/about`} className="btn-text link-underline">
-                {locale === "fr" ? "Lire le parcours complet" : "Read the full biography"}
-                <ArrowRight className="h-3.5 w-3.5" strokeWidth={1.8} />
-              </Link>
-            </div>
           </FadeUp>
         </div>
-
-        {/* Capsule stats — full-width strip below the editorial spread */}
-        <FadeUp delay={0.2} className="mt-8 lg:mt-10">
-          <div className="grid grid-cols-2 lg:grid-cols-4 rounded-2xl surface-card divide-y divide-x divide-line/70 overflow-hidden lg:divide-y-0">
-            {capsule.map((c) => (
-              <div key={c.label} className="px-6 py-6 lg:px-8 lg:py-7 text-center lg:text-left">
-                <div className="font-serif text-[28px] lg:text-[32px] leading-none tracking-[-0.02em] text-ink">
-                  {c.value}
-                </div>
-                <div className="mt-2 text-[12px] text-muted leading-tight">
-                  {c.label}
-                </div>
-              </div>
-            ))}
-          </div>
-        </FadeUp>
       </div>
     </section>
   );

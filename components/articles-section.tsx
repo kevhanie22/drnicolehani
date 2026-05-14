@@ -23,8 +23,8 @@ export function ArticlesSection({ locale }: { locale: Locale }) {
         about: it.topic,
         url: it.url,
         publisher: { "@type": "Organization", name: it.outlet },
-        author: { "@type": "Person", name: "Dr. Nicole Hani", url: "https://drnicolehani.vercel.app/" },
-        mentions: { "@type": "Person", name: "Dr. Nicole Absi Hani", "@id": "https://drnicolehani.vercel.app/#person" },
+        author: { "@type": "Person", name: "Dr. Nicole Hani", url: "https://drnicolehani.com/" },
+        mentions: { "@type": "Person", name: "Dr. Nicole Absi Hani", "@id": "https://drnicolehani.com/#person" },
       },
     })),
   };
@@ -32,7 +32,7 @@ export function ArticlesSection({ locale }: { locale: Locale }) {
   return (
     <section
       id="articles"
-      className="relative py-10 lg:py-14 border-t border-line/30 overflow-hidden"
+      className="relative section-pad section-divider overflow-hidden"
     >
       <div
         aria-hidden
@@ -75,7 +75,7 @@ export function ArticlesSection({ locale }: { locale: Locale }) {
                   (e.currentTarget as HTMLElement).style.setProperty("--mx", `${e.clientX - r.left}px`);
                   (e.currentTarget as HTMLElement).style.setProperty("--my", `${e.clientY - r.top}px`);
                 }}
-                className="group spot-hover relative block h-full overflow-hidden rounded-2xl surface-card p-7 lg:p-8 transition-all duration-500 hover:-translate-y-0.5 hover:shadow-[0_24px_48px_-24px_rgba(11,18,32,0.16)]"
+                className="group spot-hover relative flex h-full flex-col overflow-hidden rounded-2xl surface-card p-7 lg:p-8 transition-all duration-500 hover:-translate-y-0.5 hover:shadow-[0_24px_48px_-24px_rgba(11,18,32,0.16)]"
                 data-cursor={locale === "fr" ? "Lire" : "Read"}
               >
                 <span className="gold-line-grow rounded-t-2xl" aria-hidden />
@@ -85,7 +85,7 @@ export function ArticlesSection({ locale }: { locale: Locale }) {
                       <Newspaper className="h-4 w-4" strokeWidth={1.6} />
                     </span>
                     <div>
-                      <p className="font-mono text-[10.5px] tracking-[0.18em] uppercase text-gold leading-tight">
+                      <p className="eyebrow-mono text-gold/85 leading-tight">
                         {it.outlet}
                       </p>
                       <p className="text-[10.5px] tracking-tight text-muted leading-tight mt-0.5">
@@ -99,14 +99,14 @@ export function ArticlesSection({ locale }: { locale: Locale }) {
                   />
                 </div>
 
-                <h3 className="font-serif text-[20px] lg:text-[22px] text-ink leading-[1.25] tracking-[-0.005em] text-balance">
+                <h3 className="font-serif text-[20px] lg:text-[22px] text-ink leading-[1.25] tracking-[-0.005em] text-balance line-clamp-2 min-h-[2.5em]">
                   {it.title}
                 </h3>
-                <p className="mt-3 text-[15px] leading-[1.65] text-muted text-pretty">
+                <p className="mt-3 text-[15px] leading-[1.65] text-muted text-pretty line-clamp-3">
                   {it.topic}
                 </p>
 
-                <span className="mt-5 inline-flex items-center gap-1.5 text-[13px] text-brand font-medium">
+                <span className="mt-auto pt-5 inline-flex items-center gap-1.5 text-[13px] text-brand font-medium">
                   {t.articles.readCta}
                   <span aria-hidden className="h-px w-6 bg-brand/40 transition-all duration-300 group-hover:w-10 group-hover:bg-brand" />
                 </span>

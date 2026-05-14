@@ -61,7 +61,6 @@ const config: Config = {
         card: "0 1px 2px rgba(11,18,32,0.04), 0 8px 24px -8px rgba(11,18,32,0.08)",
         "card-lg": "0 4px 12px rgba(11,18,32,0.06), 0 24px 48px -16px rgba(11,18,32,0.12)",
         ring: "0 0 0 1px rgba(14,42,90,0.08)",
-        gold: "0 8px 32px -8px rgba(200,168,91,0.4)",
       },
       backgroundImage: {
         "grain": "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E\")",

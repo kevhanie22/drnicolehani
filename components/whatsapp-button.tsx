@@ -14,23 +14,24 @@ export function WhatsAppButton({ locale }: { locale: Locale }) {
       target="_blank"
       rel="noreferrer"
       aria-label={t.whatsapp}
-      className="fixed bottom-5 right-5 z-50 group"
+      style={{
+        right: "max(1.25rem, env(safe-area-inset-right))",
+        bottom: "max(1.25rem, env(safe-area-inset-bottom))",
+      }}
+      className="whatsapp-fab fixed z-40 group transition-[opacity,transform] duration-300"
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ delay: 1.2, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
     >
       <span className="relative flex">
         {!reduce && (
-          <>
-            <span className="absolute inset-0 -m-1 rounded-full bg-[#25D366] opacity-30 animate-ping" />
-            <span className="absolute inset-0 -m-3 rounded-full bg-[#25D366] opacity-15 animate-ping" style={{ animationDelay: "300ms" }} />
-          </>
+          <span className="absolute inset-0 -m-1 rounded-full bg-[#25D366] opacity-25 animate-ping" />
         )}
-        <span className="relative inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-card-lg transition-transform duration-300 group-hover:scale-105 group-active:scale-95">
-          <MessageCircle className="h-6 w-6" strokeWidth={1.8} />
+        <span className="relative inline-flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-card-lg transition-transform duration-300 group-hover:scale-105 group-active:scale-95">
+          <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6" strokeWidth={1.8} />
         </span>
       </span>
-      <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 whitespace-nowrap rounded-full bg-ink text-cream text-[12px] px-3 py-1.5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+      <span className="hidden sm:inline absolute right-full mr-3 top-1/2 -translate-y-1/2 whitespace-nowrap rounded-full bg-ink text-cream text-[12px] px-3 py-1.5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
         {t.whatsapp}
       </span>
     </motion.a>

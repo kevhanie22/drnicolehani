@@ -40,7 +40,7 @@ export function WelcomeVideoSection({ locale }: { locale: Locale }) {
   return (
     <section
       id="welcome"
-      className="relative py-10 lg:py-14 border-t border-line/30 overflow-hidden"
+      className="relative section-pad section-divider overflow-hidden"
     >
       <div
         aria-hidden
@@ -52,9 +52,9 @@ export function WelcomeVideoSection({ locale }: { locale: Locale }) {
       />
 
       <div className="container-wide relative">
-        <div className="grid lg:grid-cols-12 gap-x-10 gap-y-7 items-center">
+        <div className="grid lg:grid-cols-12 gap-x-12 gap-y-7 items-center">
           {/* Copy column */}
-          <FadeUp className="lg:col-span-4 lg:order-1 order-2">
+          <FadeUp className="lg:col-span-6 lg:order-1 order-2">
             <p className="micro-label">{t.welcome.eyebrow}</p>
             <h2 className="mt-4 font-serif text-display-lg text-ink text-balance">
               {t.welcome.title}
@@ -63,8 +63,20 @@ export function WelcomeVideoSection({ locale }: { locale: Locale }) {
               {t.welcome.body}
             </p>
 
+            <ul className="mt-7 space-y-2.5 text-[14px] text-ink/80 max-w-[34ch]">
+              {[
+                locale === "fr" ? "Une visite du cabinet" : "A walk through the practice",
+                locale === "fr" ? "L'approche, en quelques mots" : "The approach, in a few words",
+                locale === "fr" ? "À qui s'adresse ce travail" : "Who this work is for",
+              ].map((line) => (
+                <li key={line} className="flex items-start gap-2.5">
+                  <span aria-hidden className="mt-2 h-1 w-1 rounded-full bg-gold/80 shrink-0" />
+                  <span>{line}</span>
+                </li>
+              ))}
+            </ul>
+
             <div className="mt-7 inline-flex items-center gap-3 text-[12.5px] text-muted">
-              <span className="inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500" />
               <span className="tabular-nums">{t.welcome.duration}</span>
               <span className="h-1 w-1 rounded-full bg-line" />
               <span>{locale === "fr" ? "Présentation du cabinet" : "Clinic overview"}</span>
@@ -72,7 +84,7 @@ export function WelcomeVideoSection({ locale }: { locale: Locale }) {
           </FadeUp>
 
           {/* Video column — premium framed player */}
-          <FadeUp delay={0.1} className="lg:col-span-8 lg:order-2 order-1">
+          <FadeUp delay={0.1} className="lg:col-span-6 lg:order-2 order-1">
             <div className="relative">
               {/* gold gradient frame glow */}
               <div
@@ -129,22 +141,19 @@ export function WelcomeVideoSection({ locale }: { locale: Locale }) {
                         className="absolute inset-0 flex items-center justify-center"
                       >
                         <span className="relative inline-flex h-20 w-20 items-center justify-center rounded-full bg-gold text-brand-deep shadow-[0_20px_50px_-12px_rgba(0,0,0,0.45)] transition-transform duration-300 group-hover:scale-110">
-                          {!reduce && (
-                            <span className="absolute inset-0 -m-2 rounded-full bg-gold/30 animate-ping" />
-                          )}
                           <Play className="relative h-7 w-7 fill-brand-deep ml-1" strokeWidth={1.4} />
                         </span>
                       </motion.div>
 
                       {/* Bottom caption */}
-                      <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-4 text-cream">
+                      <div className="absolute bottom-5 left-5 right-5 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-2 sm:gap-4 text-cream">
                         <p className="font-serif text-[18px] lg:text-[22px] leading-snug tracking-[-0.005em] text-balance max-w-[26ch]">
                           {locale === "fr"
                             ? "Le cabinet, ses services et son équipe."
                             : "The clinic, its services and its team."}
                         </p>
-                        <span className="text-[10.5px] tracking-[0.18em] uppercase text-cream/70">
-                          CLINIC · OVERVIEW
+                        <span className="hidden sm:inline-block text-[10.5px] tracking-[0.16em] uppercase text-cream/65 shrink-0">
+                          {locale === "fr" ? "Cabinet · Aperçu" : "Clinic · Overview"}
                         </span>
                       </div>
                     </div>

@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, MessageCircle, MapPin, Phone, ArrowUpRight } from "lucide-react";
 import { type Locale } from "@/lib/i18n";
 import { getT } from "@/lib/translations";
@@ -14,7 +15,7 @@ export function CtaSection({ locale }: { locale: Locale }) {
   return (
     <section
       id="contact"
-      className="relative py-10 lg:py-14 border-t border-line/30"
+      className="relative section-pad section-divider"
     >
       <div className="container-wide">
         {/* STATEMENT PANEL — navy with gold mesh */}
@@ -27,7 +28,7 @@ export function CtaSection({ locale }: { locale: Locale }) {
             {/* faint top hairline */}
             <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
 
-            <div className="relative grid lg:grid-cols-12 gap-x-12 gap-y-8 px-7 py-14 lg:px-14 lg:py-20">
+            <div className="relative grid lg:grid-cols-12 gap-x-12 gap-y-10 px-7 py-12 lg:px-12 lg:py-14">
               {/* headline + CTAs */}
               <div className="lg:col-span-7">
                 <div className="inline-flex items-center gap-2 text-[12px] font-medium tracking-tight text-gold">
@@ -48,7 +49,7 @@ export function CtaSection({ locale }: { locale: Locale }) {
                     href={`${base}/contact`}
                     strength={0.2}
                     cursorLabel={locale === "fr" ? "Réserver" : "Book"}
-                    className="inline-flex items-center justify-center gap-2 rounded-full bg-gold text-brand-deep px-7 py-3.5 text-[14px] font-medium tracking-tight transition-all duration-300 hover:bg-gold-300 hover:shadow-[0_18px_40px_-12px_rgba(200,168,91,0.55)] active:scale-[0.98]"
+                    className="inline-flex items-center justify-center gap-2 rounded-full bg-gold text-brand-deep px-7 py-3.5 text-[14px] font-medium tracking-tight transition-all duration-300 hover:bg-gold-500 hover:text-cream active:scale-[0.98]"
                   >
                     {t.cta.primary}
                     <ArrowRight className="h-4 w-4" strokeWidth={1.8} />
@@ -57,7 +58,7 @@ export function CtaSection({ locale }: { locale: Locale }) {
                     href={site.phone.whatsappLink}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full border border-cream/20 bg-white/5 backdrop-blur px-6 py-3.5 text-[14px] font-medium text-cream transition-all duration-300 hover:bg-white/10 hover:border-cream/40"
+                    className="btn-secondary-dark"
                   >
                     <MessageCircle className="h-4 w-4 text-gold" strokeWidth={1.8} />
                     WhatsApp · {site.phone.primary}
@@ -65,7 +66,7 @@ export function CtaSection({ locale }: { locale: Locale }) {
                 </div>
 
                 {/* details rail */}
-                <div className="mt-6 pt-7 border-t border-cream/12 max-w-[560px] grid grid-cols-3 gap-6">
+                <div className="mt-8 pt-8 border-t border-cream/10 max-w-[560px] grid grid-cols-3 gap-6">
                   {[
                     {
                       l: locale === "fr" ? "Réponse" : "Reply",
@@ -81,63 +82,46 @@ export function CtaSection({ locale }: { locale: Locale }) {
                     },
                   ].map((it, i) => (
                     <div key={i}>
-                      <div className="text-[11px] tracking-tight text-cream/55">{it.l}</div>
+                      <div className="text-[11px] tracking-tight text-cream/60">{it.l}</div>
                       <div className="mt-1 font-serif text-[15px] text-cream">{it.v}</div>
                     </div>
                   ))}
                 </div>
               </div>
 
-              {/* small floating booking card on the right — premium accent */}
+              {/* Editorial photo on the right — sets the mood for the safe-space conversation */}
               <div className="lg:col-span-5 lg:pl-4">
-                <div className="relative rounded-2xl bg-white/5 backdrop-blur-xl ring-1 ring-cream/12 p-6 lg:p-7 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.5)]">
+                <figure className="relative h-full min-h-[380px]">
                   <div
                     aria-hidden
-                    className="pointer-events-none absolute inset-0 rounded-2xl"
-                    style={{
-                      background:
-                        "radial-gradient(60% 50% at 100% 0%, rgba(200,168,91,0.15), transparent 60%)",
-                    }}
+                    className="absolute -inset-2 rounded-[22px] bg-gradient-to-br from-gold/20 via-cream/5 to-brand/10"
                   />
-                  <div className="relative">
-                    <div className="flex items-center justify-between">
-                      <p className="text-[11px] tracking-tight text-cream/55">
-                        {locale === "fr" ? "Première séance" : "First session"}
+                  <div className="relative h-full min-h-[380px] rounded-[18px] overflow-hidden ring-1 ring-cream/10">
+                    <Image
+                      src="/images/session-listening.jpg"
+                      alt={
+                        locale === "fr"
+                          ? "Une séance en cours — espace sûr et confidentiel"
+                          : "A session in progress — a safe, confidential space"
+                      }
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 420px"
+                      className="object-cover object-center"
+                    />
+                    <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-brand-deep/70 via-brand-deep/15 to-transparent" />
+                    <figcaption className="absolute inset-x-0 bottom-0 p-6">
+                      <p className="font-serif italic text-[16px] text-cream/95 leading-snug text-balance max-w-[28ch]">
+                        {locale === "fr"
+                          ? "« Cinquante minutes. Sans étiquette. Sans jugement. »"
+                          : "“Fifty minutes. No label. No judgment.”"}
                       </p>
-                      <span className="inline-flex items-center gap-1.5 text-[11px] text-emerald-300/90">
-                        <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-                        {locale === "fr" ? "Créneaux ouverts" : "Slots open"}
-                      </span>
-                    </div>
-                    <p className="mt-3 font-serif text-[24px] leading-[1.15] text-cream tracking-[-0.01em] text-balance">
-                      {locale === "fr"
-                        ? "Cinquante minutes. Sans étiquette. Sans jugement."
-                        : "Fifty minutes. No label. No judgment."}
-                    </p>
-
-                    <ul className="mt-6 space-y-3 text-[13.5px] text-cream/80">
-                      {[
-                        locale === "fr" ? "Cabinet à Zouk Mosbeh ou en visio" : "In-person at Zouk Mosbeh or by video",
-                        locale === "fr" ? "Confidentialité absolue" : "Absolute confidentiality",
-                        locale === "fr" ? "Sans ordonnance médicale" : "No medical referral required",
-                      ].map((l) => (
-                        <li key={l} className="flex items-start gap-2.5">
-                          <span aria-hidden className="mt-2 h-1 w-1 rounded-full bg-gold shrink-0" />
-                          <span>{l}</span>
-                        </li>
-                      ))}
-                    </ul>
-
-                    <div className="mt-7 pt-5 border-t border-cream/10 flex items-center justify-between">
-                      <span className="text-[11.5px] text-cream/55">
-                        {locale === "fr" ? "Tarif" : "Session fee"}
-                      </span>
-                      <span className="font-serif text-[15px] text-cream">
-                        USD 80 — 120
-                      </span>
-                    </div>
+                      <div className="mt-3 inline-flex items-center gap-3 text-[11px] tracking-[0.14em] uppercase text-cream/65">
+                        <span className="h-px w-8 bg-gold/70" />
+                        {locale === "fr" ? "Première séance" : "First session"}
+                      </div>
+                    </figcaption>
                   </div>
-                </div>
+                </figure>
               </div>
             </div>
           </div>

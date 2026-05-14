@@ -9,22 +9,23 @@ export function Footer({ locale }: { locale: Locale }) {
   const t = getT(locale);
   const base = locale === "en" ? "" : `/${locale}`;
   return (
-    <footer className="relative bg-brand-deep text-cream/85 mt-16">
+    <footer className="relative bg-brand-deep text-cream/85 mt-10 lg:mt-12">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
       <div className="container-wide pt-12 pb-8">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-8">
           <div className="lg:col-span-5">
             <Link href={base || "/"} className="inline-flex items-center gap-3">
-              <span className="relative inline-flex h-14 w-14 items-center justify-center">
+              <span className="relative inline-flex h-12 w-12 lg:h-13 lg:w-13 items-center justify-center">
                 <Image
                   src="/images/logo-mark.png"
                   alt="Dr. Nicole Hani logo"
                   width={88}
                   height={88}
                   className="h-full w-full object-contain"
+                  loading="lazy"
                 />
               </span>
-              <span className="font-serif text-[20px] text-cream">Dr. Nicole Hani</span>
+              <span className="font-serif text-[19px] text-cream">Dr. Nicole Hani</span>
             </Link>
             <p className="mt-5 max-w-md text-[14px] leading-relaxed text-cream/65">
               {t.footer.tagline}
@@ -46,7 +47,7 @@ export function Footer({ locale }: { locale: Locale }) {
           </div>
 
           <div className="lg:col-span-3">
-            <h4 className="text-[11px] tracking-[0.2em] uppercase text-gold/90 mb-5">{t.footer.sections.explore}</h4>
+            <h4 className="eyebrow-mono text-gold/80 mb-5">{t.footer.sections.explore}</h4>
             <ul className="space-y-3 text-[14px]">
               <li><Link href={`${base}/about`} className="hover:text-gold transition-colors">{t.nav.about}</Link></li>
               <li><Link href={`${base}/services`} className="hover:text-gold transition-colors">{t.nav.services}</Link></li>
@@ -56,7 +57,7 @@ export function Footer({ locale }: { locale: Locale }) {
           </div>
 
           <div className="lg:col-span-4">
-            <h4 className="text-[11px] tracking-[0.2em] uppercase text-gold/90 mb-5">{t.footer.sections.contact}</h4>
+            <h4 className="eyebrow-mono text-gold/80 mb-5">{t.footer.sections.contact}</h4>
             <ul className="space-y-3 text-[14px]">
               <li>
                 <a href={site.phone.whatsappLink} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2.5 hover:text-gold transition-colors">

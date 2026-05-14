@@ -52,10 +52,17 @@ html.lenis, html.lenis body { height: auto; }
   }
 }
 
-@media (pointer: fine) and (prefers-reduced-motion: no-preference) and (min-width: 1024px) {
+@media (pointer: fine) and (hover: hover) and (prefers-reduced-motion: no-preference) and (min-width: 1024px) {
   html, body { cursor: none; }
   a, button, [role="button"], summary, label[for] { cursor: none; }
   input, textarea, select, [contenteditable="true"] { cursor: text; }
+}
+
+/* FAB hides while the mobile menu is open so it doesn't sit on top of nav items */
+body[data-menu-open="true"] .whatsapp-fab {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.9);
 }
 
 @layer components {
@@ -63,9 +70,18 @@ html.lenis, html.lenis body { height: auto; }
   .container-default { @apply max-w-5xl mx-auto px-6 lg:px-8; }
   .container-wide  { @apply max-w-6xl mx-auto px-6 lg:px-8; }
 
+  /* one rhythm — every section uses this */
+  .section-pad { @apply py-16 lg:py-24; }
+  .section-divider { @apply border-t border-line/60; }
+
   /* simplest eyebrow — no decoration */
   .eyebrow {
     @apply text-[12.5px] tracking-tight text-muted font-normal;
+  }
+
+  /* quiet card-metadata eyebrow — replaces font-mono uppercase scatter */
+  .eyebrow-mono {
+    @apply text-[10.5px] tracking-[0.16em] uppercase text-muted/75 font-medium;
   }
 
   .btn-primary {
@@ -81,6 +97,15 @@ html.lenis, html.lenis body { height: auto; }
            px-7 py-3.5 text-[15px] font-medium tracking-tight
            transition-all duration-300 ease-out
            hover:bg-ink hover:text-cream hover:border-ink
+           active:scale-[0.98];
+  }
+  /* dark-panel ghost (navy/photo backgrounds) */
+  .btn-secondary-dark {
+    @apply inline-flex items-center justify-center gap-2 rounded-full
+           border border-cream/25 bg-white/5 text-cream
+           px-7 py-3.5 text-[15px] font-medium tracking-tight backdrop-blur
+           transition-all duration-300 ease-out
+           hover:bg-white/10 hover:border-cream/45
            active:scale-[0.98];
   }
   .btn-text {

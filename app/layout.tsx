@@ -29,7 +29,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://drnicolehani.vercel.app"),
+  metadataBase: new URL("https://drnicolehani.com"),
   title: {
     default: "Dr. Nicole Hani — Clinical Psychologist in Lebanon · CBT Therapist · Beirut",
     template: "%s · Dr. Nicole Hani — Psychologist in Lebanon",
@@ -112,7 +112,7 @@ export const metadata: Metadata = {
   },
 };
 
-const SITE_URL = "https://drnicolehani.vercel.app";
+const SITE_URL = "https://drnicolehani.com";
 
 const physicianSchema = {
   "@context": "https://schema.org",
